@@ -17,7 +17,7 @@ namespace Avalonia.Controls
             ExtendClientAreaChromeHints = ExtendClientAreaChromeHints.SystemChromeButtons;
             ExtendClientAreaTitleBarHeightHint = -1;
 
-            TransparencyLevelHint = WindowTransparencyLevel.Blur;
+            TransparencyLevelHint = WindowTransparencyLevel.Blur;            
 
             this.GetObservable(WindowStateProperty)
                 .Subscribe(x =>
@@ -25,7 +25,16 @@ namespace Avalonia.Controls
                     PseudoClasses.Set(":maximized", x == WindowState.Maximized);
                     PseudoClasses.Set(":fullscreen", x == WindowState.FullScreen);
                 });
-        }
+
+            this.GetObservable(IsExtendedIntoWindowDecorationsProperty)
+                .Subscribe(x =>
+                {
+                    if(!x)
+                    {
+                        SystemDecorations = SystemDecorations.BorderOnly;                                                
+                    }
+                });
+        }        
 
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
         {
