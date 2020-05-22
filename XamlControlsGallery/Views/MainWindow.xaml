@@ -1,0 +1,178 @@
+﻿<FluentWindow xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:XamlControlsGallery.ViewModels;assembly=XamlControlsGallery"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="XamlControlsGallery.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        x:Name="MainWindow"
+        FontFamily="Segoe UI"        
+        FontSize="14"    
+        Background="{x:Null}"              
+        Title="XamlControlsGallery">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+
+  <!-- TODO Move to fluent window template -->
+  <Panel Margin="{Binding #MainWindow.OffScreenMargin}">
+
+    <DockPanel VerticalAlignment="Stretch">
+      <Panel DockPanel.Dock="Left">
+        <Panel Background="#7F000000"  IsHitTestVisible="False" />
+        <StackPanel TextBlock.Foreground="White">
+          <TextBlock Text="XAML Controls Gallery" Margin="42 12" />
+          <ItemsControl Margin="{Binding #MainWindow.WindowDecorationMargins}">
+            <ItemsControl.Styles>
+              <Style Selector="ListBoxItem">
+                <Setter Property="Height" Value="30" />
+                <Setter Property="Margin" Value="40 0" />
+                <Setter Property="HorizontalAlignment" Value="Stretch" />
+              </Style>
+            </ItemsControl.Styles>
+            <ListBoxItem>
+              <TextBlock Text="Basic Input" />
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock Text="Collections"/>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock Text="Date and Time"/>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock Text="Dialogs and Flyouts"/>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock Text="Layout"/>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock Text="Media"/>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock Text="Menus and Toolbars"/>
+            </ListBoxItem>
+          </ItemsControl>
+        </StackPanel>                 
+      </Panel>
+
+      <DockPanel DockPanel.Dock="Top" Background="#7F000000" IsHitTestVisible="False" Height="{Binding #MainWindow.WindowDecorationMargins.Top}" />
+      <Panel>        
+        <Panel Background="#BF000000"  IsHitTestVisible="False" />
+        <StackPanel Orientation="Vertical" Spacing="4" Margin="20" TextBlock.Foreground="White">
+          <StackPanel.Styles>
+            <Style Selector="TextBox">
+              <Setter Property="Background" Value="Transparent" />              
+            </Style>
+            <Style Selector="TextBox /template/ Border">
+              <Setter Property="CornerRadius" Value="2" />              
+            </Style>
+          </StackPanel.Styles>
+                    
+          <TextBlock>TextBox</TextBlock>
+          <TextBlock Classes="h2">A control into which the user can input text</TextBlock>
+
+          <StackPanel Orientation="Horizontal"
+                    Margin="0,16,0,0"
+                    HorizontalAlignment="Center"
+                    Spacing="16">
+            <StackPanel Orientation="Vertical" Spacing="8">
+              <TextBox Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." Width="200" />
+              <TextBox Watermark="ReadOnly" IsReadOnly="True" Text="This is read only"/>
+              <TextBox Width="200" Watermark="Watermark" />
+              <TextBox Width="200"
+                       Watermark="Floating Watermark"
+                       UseFloatingWatermark="True"
+                       Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
+
+              <TextBox Width="200"
+                       Watermark="Password Box"
+                       UseFloatingWatermark="True"
+                       PasswordChar="*"
+                       Text="Password" />
+              <TextBox Width="200" Text="Left aligned text" TextAlignment="Left" />
+              <TextBox Width="200" Text="Center aligned text" TextAlignment="Center" />
+              <TextBox Width="200" Text="Right aligned text" TextAlignment="Right" />
+              <TextBox Width="200" Text="Custom selection brush"
+                        SelectionStart="5" SelectionEnd="22"
+                        SelectionBrush="Green" SelectionForegroundBrush="Yellow"/>
+              <TextBox Width="200" Text="Custom caret brush" CaretBrush="DarkOrange"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Spacing="8">
+              <TextBox AcceptsReturn="True" TextWrapping="Wrap" Width="200" Height="125"
+                       Text="Multiline TextBox with TextWrapping.&#xD;&#xD;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est." />
+              <TextBox AcceptsReturn="True" Width="200" Height="125"
+                       Text="Multiline TextBox with no TextWrapping.&#xD;&#xD;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est." />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Spacing="8">
+              <TextBlock Classes="h2">resm fonts</TextBlock>
+              <TextBox Width="200" Text="Custom font regular" FontWeight="Normal" FontStyle="Normal" />
+              <TextBox Width="200" Text="Custom font bold" FontWeight="Bold" FontStyle="Normal" />
+              <TextBox Width="200" Text="Custom font italic" FontWeight="Normal" FontStyle="Italic" />
+              <TextBox Width="200" Text="Custom font italic bold" FontWeight="Bold" FontStyle="Italic" />
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Spacing="8">
+              <TextBlock Classes="h2">res fonts</TextBlock>
+              <TextBox Width="200" Text="Custom font regular" FontWeight="Normal" FontStyle="Normal" />
+              <TextBox Width="200" Text="Custom font bold" FontWeight="Bold" FontStyle="Normal" />
+              <TextBox Width="200" Text="Custom font italic" FontWeight="Normal" FontStyle="Italic" />
+              <TextBox Width="200" Text="Custom font italic bold" FontWeight="Bold" FontStyle="Italic" />
+            </StackPanel>
+          </StackPanel>
+        </StackPanel>
+      </Panel>
+    </DockPanel>
+    <Image Source="/Assets/avalonia-logo.ico" Height="22" Margin="10 10" VerticalAlignment="Top" HorizontalAlignment="Left" />
+    <StackPanel Height="{Binding #MainWindow.WindowDecorationMargins.Top}" Spacing="2" Margin="0 0 7 0" VerticalAlignment="Top" HorizontalAlignment="Right" TextBlock.FontSize="10" Orientation="Horizontal">
+      <StackPanel.Styles>
+        <Style Selector="Panel">
+          <Setter Property="Width" Value="45" />
+          <Setter Property="Background" Value="Transparent" />
+        </Style>
+        <Style Selector="Path">
+          <Setter Property="Fill" Value="White" />
+        </Style>
+        <Style Selector="Panel:pointerover">
+          <Setter Property="Background" Value="#1FFFFFFF" />
+        </Style>
+        <Style Selector="Panel#PART_CloseButton:pointerover">
+          <Setter Property="Background" Value="#AFFF0000" />
+        </Style>
+      </StackPanel.Styles>      
+      <Panel x:Name="PART_FullScreenButton">
+        <Path Width="10" Height="10" StrokeThickness="0" Stretch="UniformToFill" />
+      </Panel>
+
+      <Panel x:Name="PART_MinimiseButton">
+        <Path Width="11" Height="1" StrokeThickness="0" Stretch="UniformToFill" Data="M2048 1229v-205h-2048v205h2048z" />
+      </Panel>
+
+      <Panel x:Name="PART_RestoreButton">        
+        <Path Width="11" Height="10" StrokeThickness="0" Stretch="UniformToFill" />
+      </Panel>
+
+      <Panel x:Name="PART_CloseButton">
+        <Path Width="11" Height="11" StrokeThickness="0" Stretch="UniformToFill" Data="M1169 1024l879 -879l-145 -145l-879 879l-879 -879l-145 145l879 879l-879 879l145 145l879 -879l879 879l145 -145z" />
+      </Panel>
+    </StackPanel>
+  </Panel>
+
+  <FluentWindow.Styles>
+    <Style Selector="Window Panel#PART_RestoreButton > Path">
+      <Setter Property="Data" Value="M2048 2048v-2048h-2048v2048h2048zM1843 1843h-1638v-1638h1638v1638z" />
+    </Style>
+    <Style Selector="Window:maximized Panel#PART_RestoreButton > Path">      
+      <Setter Property="Data" Value="M2048 410h-410v-410h-1638v1638h410v410h1638v-1638zM1434 1434h-1229v-1229h1229v1229zM1843 1843h-1229v-205h1024v-1024h205v1229z" />
+    </Style>
+    <Style Selector="Window Panel#PART_FullScreenButton > Path">
+      <Setter Property="Data" Value="M2048 2048v-819h-205v469l-1493 -1493h469v-205h-819v819h205v-469l1493 1493h-469v205h819z" />
+    </Style>
+    <Style Selector="Window:fullscreen Panel#PART_FullScreenButton > Path">
+      <Setter Property="Data" Value="M205 1024h819v-819h-205v469l-674 -674l-145 145l674 674h-469v205zM1374 1229h469v-205h-819v819h205v-469l674 674l145 -145z" />
+    </Style>
+  </FluentWindow.Styles>
+
+</FluentWindow>
