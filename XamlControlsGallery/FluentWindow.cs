@@ -13,11 +13,12 @@ namespace Avalonia.Controls
 
         public FluentWindow()
         {
-            ExtendClientAreaToDecorationsHint = true;
-            ExtendClientAreaChromeHints = ExtendClientAreaChromeHints.SystemChromeButtons;
-            ExtendClientAreaTitleBarHeightHint = -1;
+            //ExtendClientAreaToDecorationsHint = true;
+            //ExtendClientAreaTitleBarHeightHint = -1;
 
-            TransparencyLevelHint = WindowTransparencyLevel.Blur;            
+            TransparencyLevelHint = WindowTransparencyLevel.AcrylicBlur;
+
+            SystemDecorations = SystemDecorations.BorderOnly;
 
             this.GetObservable(WindowStateProperty)
                 .Subscribe(x =>
@@ -26,19 +27,20 @@ namespace Avalonia.Controls
                     PseudoClasses.Set(":fullscreen", x == WindowState.FullScreen);
                 });
 
-            this.GetObservable(IsExtendedIntoWindowDecorationsProperty)
-                .Subscribe(x =>
-                {
-                    if(!x)
-                    {
-                        SystemDecorations = SystemDecorations.BorderOnly;                                                
-                    }
-                });
-        }        
+            //this.GetObservable(IsExtendedIntoWindowDecorationsProperty)
+            //    .Subscribe(x =>
+            //    {
+            //        if (!x)
+            //        {
+            //            SystemDecorations = SystemDecorations.BorderOnly;
+            //        }
+            //    });
+        }
 
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
         {
-            base.OnApplyTemplate(e);            
+            base.OnApplyTemplate(e);
+            //ExtendClientAreaChromeHints = ExtendClientAreaChromeHints.ManagedChromeButtons;
         }
     }
 }
