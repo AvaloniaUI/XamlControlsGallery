@@ -6,7 +6,7 @@
         mc:Ignorable="d" d:DesignWidth="1350" d:DesignHeight="700" Height="700" Width="1350"
         x:Class="XamlControlsGallery.Views.MainWindow"
         Icon="{x:Null}"
-        x:Name="MainWindow" WindowStartupLocation="CenterScreen"
+        x:Name="MainWindow"
         FontFamily="Segoe UI"
         FontSize="14"
         Background="{x:Null}"
@@ -24,7 +24,7 @@
         <Panel.Background>
           <ExperimentalAcrylicBrush TintColor="Black" TintLuminosityOpacity="0.8" TintOpacity="0.9" />
         </Panel.Background>        
-        <StackPanel TextBlock.Foreground="White" Margin="0 30 0 0">
+        <StackPanel TextBlock.Foreground="White" Margin="0 40 0 0">
           <TextBlock  Margin="20 0" Text="XAML Controls Gallery" />         
           <ItemsControl>
             <ItemsControl.Styles>
