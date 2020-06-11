@@ -25,10 +25,7 @@
           <ExperimentalAcrylicBrush TintColor="Black" TintLuminosityOpacity="0.8" TintOpacity="0.9" />
         </Panel.Background>        
         <StackPanel TextBlock.Foreground="White" Margin="0 30 0 0">
-          <StackPanel Orientation="Horizontal" Margin="20 0" Spacing="20">
-            <Image Source="/Assets/avalonia-logo.ico" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" />
-            <TextBlock Text="XAML Controls Gallery" />
-          </StackPanel>          
+          <TextBlock  Margin="20 0" Text="XAML Controls Gallery" />         
           <ItemsControl>
             <ItemsControl.Styles>
               <Style Selector="ListBoxItem">                
