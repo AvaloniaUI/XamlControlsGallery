@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -14,8 +14,9 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.9.999-cibuild0008232-beta" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.9.999-cibuild0008232-beta" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.999-cibuild0008232-beta" />
+    <PackageReference Include="Avalonia" Version="0.9.999-cibuild0008239-beta" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.9.999-cibuild0008239-beta" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.999-cibuild0008239-beta" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.999-cibuild0008239-beta" />
   </ItemGroup>
 </Project>

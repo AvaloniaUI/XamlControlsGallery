@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1350" d:DesignHeight="700" Height="700" Width="1350"
         x:Class="XamlControlsGallery.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="{x:Null}"
         x:Name="MainWindow" WindowStartupLocation="CenterScreen"
         FontFamily="Segoe UI"
         FontSize="14"
@@ -20,13 +20,16 @@
   <Panel Margin="{Binding #MainWindow.OffScreenMargin}">
 
     <DockPanel VerticalAlignment="Stretch">
-      <Panel DockPanel.Dock="Left">
+      <Panel DockPanel.Dock="Left" Width="240">
         <Panel.Background>
           <ExperimentalAcrylicBrush TintColor="Black" TintLuminosityOpacity="0.8" TintOpacity="0.9" />
-        </Panel.Background>
-        <StackPanel TextBlock.Foreground="White">
-          <TextBlock Text="XAML Controls Gallery" Margin="42 12" />
-          <ItemsControl Margin="{Binding #MainWindow.WindowDecorationMargins}">
+        </Panel.Background>        
+        <StackPanel TextBlock.Foreground="White" Margin="0 30 0 0">
+          <StackPanel Orientation="Horizontal" Margin="20 0" Spacing="20">
+            <Image Source="/Assets/avalonia-logo.ico" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock Text="XAML Controls Gallery" />
+          </StackPanel>          
+          <ItemsControl>
             <ItemsControl.Styles>
               <Style Selector="ListBoxItem">                
                 <Setter Property="Margin" Value="0 0" />
@@ -42,10 +45,16 @@
               <TextBox HorizontalAlignment="Stretch" Watermark="Search" />
             </ListBoxItem>
             <ListBoxItem>
-              <TextBlock Text="Overview"/>
+              <StackPanel Margin="10 0 0 0" Orientation="Horizontal" Spacing="20">
+                <Image Source="/Assets/overview.png" Height="22" />
+                <TextBlock Text="Overview" VerticalAlignment="Center"/>
+              </StackPanel>
             </ListBoxItem>
             <ListBoxItem>
-              <TextBlock Text="Collections"/>
+              <StackPanel Margin="10 0 0 0" Orientation="Horizontal" Spacing="20">
+                <Image Source="/Assets/boards.png" Height="22" />
+                <TextBlock Text="Text Input" VerticalAlignment="Center"/>
+              </StackPanel>
             </ListBoxItem>
             <ListBoxItem>
               <TextBlock Text="Date and Time"/>
@@ -63,15 +72,17 @@
               <TextBlock Text="Menus and Toolbars"/>
             </ListBoxItem>
           </ItemsControl>
-        </StackPanel>
+        </StackPanel>        
       </Panel>
 
-      <DockPanel DockPanel.Dock="Top" Background="#7F000000" IsHitTestVisible="False" Height="{Binding #MainWindow.WindowDecorationMargins.Top}" />
+      
       <Panel>
-        <Panel.Background>
-          <ExperimentalAcrylicBrush TintColor="#222222" TintLuminosityOpacity="0.8" TintOpacity="0.9" />
-        </Panel.Background>
-        <TextBlock Text="Overview" Margin="40" FontSize="32" FontWeight="Light" />
+        <Panel IsHitTestVisible="False">
+          <Panel.Background>
+            <ExperimentalAcrylicBrush TintColor="#222222" TintLuminosityOpacity="0.8" TintOpacity="0.9" />
+          </Panel.Background>
+        </Panel>        
+        <TextBlock Text="Overview" Margin="40 20" FontSize="32" FontWeight="Light" />
         <Panel.Styles>
           <Style Selector="TextBlock.header">
             <Setter Property="Margin" Value="0 30 0 20" />
@@ -239,8 +250,7 @@
 
         </StackPanel>
       </Panel>
-    </DockPanel>
-    <Image Source="/Assets/avalonia-logo.ico" Height="22" Margin="10 10" VerticalAlignment="Top" HorizontalAlignment="Left" />
+    </DockPanel>    
   </Panel>
 
 </FluentWindow>
