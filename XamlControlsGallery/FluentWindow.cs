@@ -31,6 +31,7 @@ namespace Avalonia.Controls
                     if (!x)
                     {
                         SystemDecorations = SystemDecorations.BorderOnly;
+                        TransparencyLevelHint = WindowTransparencyLevel.Blur;
                     }
                 });
         }
@@ -38,7 +39,7 @@ namespace Avalonia.Controls
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
         {
             base.OnApplyTemplate(e);            
-            ExtendClientAreaChromeHints = ExtendClientAreaChromeHints.ManagedChromeButtons;
+            ExtendClientAreaChromeHints = ExtendClientAreaChromeHints.SystemChromeButtons;
         }
     }
 }
