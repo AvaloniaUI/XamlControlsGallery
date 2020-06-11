@@ -1,2 +1,3 @@
 # XamlControlsGallery
-![image](https://user-images.githubusercontent.com/4672627/82622846-29bf2500-9bb5-11ea-9be1-78c92649c6d7.png)
+
+![image](https://user-images.githubusercontent.com/4672627/84333530-65229300-ab66-11ea-879d-bb5ff8591867.png)
