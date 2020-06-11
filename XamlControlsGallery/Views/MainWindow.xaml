@@ -24,8 +24,9 @@
         <Panel.Background>
           <ExperimentalAcrylicBrush TintColor="Black" TintLuminosityOpacity="0.8" TintOpacity="0.9" />
         </Panel.Background>        
-        <StackPanel TextBlock.Foreground="White" Margin="0 40 0 0">
-          <TextBlock  Margin="20 0" Text="XAML Controls Gallery" />         
+        <StackPanel Spacing="20" TextBlock.Foreground="White" Margin="0 40 0 0">
+          <TextBlock  Margin="20 0" Text="XAML Controls Gallery" />
+          <AutoCompleteBox HorizontalAlignment="Stretch" Margin="20 0" Watermark="Search" Items="{Binding SearchItems}" />                      
           <ItemsControl>
             <ItemsControl.Styles>
               <Style Selector="ListBoxItem">                
@@ -37,10 +38,7 @@
               <Style Selector="ListBoxItem > TextBlock">
                 <Setter Property="Margin" Value="10 5" />
               </Style>
-            </ItemsControl.Styles>
-            <ListBoxItem HorizontalContentAlignment="Stretch">
-              <TextBox HorizontalAlignment="Stretch" Watermark="Search" />
-            </ListBoxItem>
+            </ItemsControl.Styles>            
             <ListBoxItem>
               <StackPanel Margin="10 0 0 0" Orientation="Horizontal" Spacing="20">
                 <Image Source="/Assets/overview.png" Height="22" />

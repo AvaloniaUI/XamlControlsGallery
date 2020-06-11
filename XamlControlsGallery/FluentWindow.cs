@@ -39,7 +39,10 @@ namespace Avalonia.Controls
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
         {
             base.OnApplyTemplate(e);            
-            ExtendClientAreaChromeHints = ExtendClientAreaChromeHints.SystemChromeButtons | ExtendClientAreaChromeHints.OSXThickTitleBar;
+            ExtendClientAreaChromeHints = 
+                ExtendClientAreaChromeHints.SystemChromeButtons | 
+                ExtendClientAreaChromeHints.ManagedChromeButtons |
+                ExtendClientAreaChromeHints.OSXThickTitleBar;
         }
     }
 }
