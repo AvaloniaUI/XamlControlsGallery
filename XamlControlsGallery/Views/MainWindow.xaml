@@ -20,10 +20,10 @@
   <Panel Margin="{Binding #MainWindow.OffScreenMargin}">
 
     <DockPanel VerticalAlignment="Stretch">
-      <Panel DockPanel.Dock="Left" Width="240">
-        <Panel.Background>
-          <ExperimentalAcrylicBrush TintColor="Black" TintLuminosityOpacity="0.8" TintOpacity="0.9" />
-        </Panel.Background>        
+      <ExperimentalAcrylicBorder DockPanel.Dock="Left" Width="240">
+        <ExperimentalAcrylicBorder.Material>
+          <ExperimentalAcrylicMaterial TintColor="Black" MaterialOpacity="0.75" TintOpacity="1" />
+        </ExperimentalAcrylicBorder.Material>        
         <StackPanel Spacing="20" TextBlock.Foreground="White" Margin="0 40 0 0">
           <TextBlock  Margin="20 0" Text="XAML Controls Gallery" />
           <AutoCompleteBox HorizontalAlignment="Stretch" Margin="20 0" Watermark="Search" Items="{Binding SearchItems}" />                      
@@ -40,16 +40,10 @@
               </Style>
             </ItemsControl.Styles>            
             <ListBoxItem>
-              <StackPanel Margin="10 0 0 0" Orientation="Horizontal" Spacing="20">
-                <Image Source="/Assets/overview.png" Height="22" />
-                <TextBlock Text="Overview" VerticalAlignment="Center"/>
-              </StackPanel>
+              <TextBlock Text="Overview" VerticalAlignment="Center"/>
             </ListBoxItem>
             <ListBoxItem>
-              <StackPanel Margin="10 0 0 0" Orientation="Horizontal" Spacing="20">
-                <Image Source="/Assets/boards.png" Height="22" />
-                <TextBlock Text="Text Input" VerticalAlignment="Center"/>
-              </StackPanel>
+              <TextBlock Text="Text Input" />
             </ListBoxItem>
             <ListBoxItem>
               <TextBlock Text="Date and Time"/>
@@ -68,15 +62,15 @@
             </ListBoxItem>
           </ItemsControl>
         </StackPanel>        
-      </Panel>
+      </ExperimentalAcrylicBorder>
 
       
       <Panel>
-        <Panel IsHitTestVisible="False">
-          <Panel.Background>
-            <ExperimentalAcrylicBrush TintColor="#222222" TintLuminosityOpacity="0.8" TintOpacity="0.9" />
-          </Panel.Background>
-        </Panel>        
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+          <ExperimentalAcrylicBorder.Material>
+            <ExperimentalAcrylicMaterial TintColor="#222222" MaterialOpacity="0.75" TintOpacity="1" />
+          </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>        
         <TextBlock Text="Overview" Margin="40 20" FontSize="32" FontWeight="Light" />
         <Panel.Styles>
           <Style Selector="TextBlock.header">
@@ -139,9 +133,13 @@
             <TextBlock
                 Text="Date picker" Classes="header" />
 
+            <DatePicker />
+
             <TextBlock
                 Text="Time picker"
                 Classes="header" />
+
+            <TimePicker />
 
             <Calendar Margin="0,31,0,0" />
           </StackPanel>
