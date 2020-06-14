@@ -11,6 +11,11 @@
         FontSize="14"
         Background="{x:Null}"
         Title="XamlControlsGallery">
+  <FluentWindow.Styles>
+    <Style Selector="TitleBar:fullscreen">
+      <Setter Property="Background" Value="#7f000000" />
+    </Style>
+  </FluentWindow.Styles>
 
   <Design.DataContext>
     <vm:MainWindowViewModel/>
@@ -22,7 +27,7 @@
     <DockPanel VerticalAlignment="Stretch">
       <ExperimentalAcrylicBorder DockPanel.Dock="Left" Width="240">
         <ExperimentalAcrylicBorder.Material>
-          <ExperimentalAcrylicMaterial TintColor="Black" MaterialOpacity="0.75" TintOpacity="1" />
+          <ExperimentalAcrylicMaterial TintColor="Black" MaterialOpacity="0.85" TintOpacity="1" />
         </ExperimentalAcrylicBorder.Material>        
         <StackPanel Spacing="20" TextBlock.Foreground="White" Margin="0 40 0 0">
           <TextBlock  Margin="20 0" Text="XAML Controls Gallery" />
@@ -68,7 +73,7 @@
       <Panel>
         <ExperimentalAcrylicBorder IsHitTestVisible="False">
           <ExperimentalAcrylicBorder.Material>
-            <ExperimentalAcrylicMaterial TintColor="#222222" MaterialOpacity="0.75" TintOpacity="1" />
+            <ExperimentalAcrylicMaterial TintColor="#222222" MaterialOpacity="0.85" TintOpacity="1" />
           </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>        
         <TextBlock Text="Overview" Margin="40 20" FontSize="32" FontWeight="Light" />
@@ -163,9 +168,9 @@
               <ListBox
                   SelectedIndex="0"
                   Margin="0,6">
-                <ListBoxItem Content="Microsoft" />
+                <ListBoxItem Content="Linux" />
+                <ListBoxItem Content="Mac" />
                 <ListBoxItem Content="Windows" />
-                <ListBoxItem Content="Office" />
               </ListBox>
               <Border
                   BorderBrush="{DynamicResource SystemControlForegroundChromeHighBrush}"
@@ -186,9 +191,9 @@
                     <Setter Property="Padding" Value="12,5,12,8" />
                   </Style>
                 </ListBox.Styles>
-                <ListBoxItem Content="Microsoft" />
+                <ListBoxItem Content="Linux" />
+                <ListBoxItem Content="Mac" />
                 <ListBoxItem Content="Windows" />
-                <ListBoxItem Content="Office" />
               </ListBox>
               <Border
                   BorderBrush="{DynamicResource SystemControlForegroundChromeHighBrush}"
@@ -216,29 +221,28 @@
             <TextBox
                 Watermark="Placeholder text"
                 PasswordChar="*"
-                Margin="0,17,0,25" />
+                Margin="0,17,0,0" />
 
             <TextBlock
-                Text="Toggle switch"
+                Text="Numeric up down"
                 Classes="header" />
-            <Grid Margin="0,0,0,25">
-              <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="12" />
-                <RowDefinition Height="Auto" />
-              </Grid.RowDefinitions>
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition Width="Auto" />
-              </Grid.ColumnDefinitions>
-            </Grid>
+            <NumericUpDown FormatString="C2" Increment="0.25" />
 
             <TextBlock
                 Text="Slider"
                 Classes="header" />
-            <Slider
+            <Slider x:Name="Slider"
                 Value="50"
                 Maximum="100" />
+
+            <TextBlock
+                Text="Progress bar"
+                Classes="header" />
+
+            <ProgressBar Value="{Binding #Slider.Value}" />
+            
+            <ProgressBar IsIndeterminate="True" Margin="0 40" />
+            
           </StackPanel>
 
         </StackPanel>

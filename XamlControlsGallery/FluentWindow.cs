@@ -30,7 +30,7 @@ namespace Avalonia.Controls
                 {
                     if (!x)
                     {
-                        SystemDecorations = SystemDecorations.BorderOnly;
+                        SystemDecorations = SystemDecorations.Full;
                         TransparencyLevelHint = WindowTransparencyLevel.Blur;
                     }
                 });
