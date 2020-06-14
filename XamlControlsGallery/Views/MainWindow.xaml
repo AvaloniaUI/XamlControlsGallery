@@ -7,8 +7,8 @@
         x:Class="XamlControlsGallery.Views.MainWindow"
         Icon="{x:Null}"
         x:Name="MainWindow"
-        FontFamily="Segoe UI"
-        FontSize="14"
+        FontFamily="/Assets/Roboto/Roboto-*.ttf#Roboto"
+        FontSize="14"                     
         Background="{x:Null}"
         Title="XamlControlsGallery">
   <FluentWindow.Styles>
@@ -189,7 +189,10 @@
 
               <TimePicker />
 
-              <Calendar Margin="0,31,0,0" />
+              <TextBlock
+                  Text="Calendar"
+                  Classes="header" />
+              <Calendar />
             </StackPanel>
 
             <StackPanel Width="241">
@@ -207,7 +210,10 @@
                   IsEnabled="False"
                   Margin="0,17,0,0" />
 
-              <Grid Margin="0,31,0,0">
+              <TextBlock
+                  Text="List box"
+                  Classes="header" />
+              <Grid>
                 <ListBox
                     SelectedIndex="0"
                     Margin="0,6">
@@ -244,11 +250,6 @@
                     CornerRadius="{DynamicResource ControlCornerRadius}"
                     IsHitTestVisible="False" />
               </Grid>
-
-              <Button
-                  Content="Button with flyout"
-                  Margin="0,31,0,0">
-              </Button>
             </StackPanel>
 
             <StackPanel Width="265">
