@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1350" d:DesignHeight="700" Height="800" Width="1400"
+        xmlns:pages="clr-namespace:XamlControlsGallery.Pages;assembly=XamlControlsGallery"
         x:Class="XamlControlsGallery.Views.MainWindow"
         Icon="{x:Null}"
         x:Name="MainWindow"
         FontFamily="/Assets/Roboto/Roboto-*.ttf#Roboto"
-        FontSize="14"                     
+        FontSize="14"
         Background="{x:Null}"
         Title="XamlControlsGallery">
   <FluentWindow.Styles>
@@ -34,7 +35,7 @@
               </NativeMenuItem.Menu>
             </NativeMenuItem>
             <NativeMenuItemSeperator/>
-            
+
           </NativeMenu>
         </NativeMenuItem.Menu>
       </NativeMenuItem>
@@ -67,16 +68,73 @@
     </NativeMenu>
   </NativeMenu.Menu>
 
-  <!-- TODO Move to fluent window template -->
   <Panel Margin="{Binding #MainWindow.OffScreenMargin}">
+    <DockPanel HorizontalAlignment="Stretch">
+      <ExperimentalAcrylicBorder DockPanel.Dock="Left" Width="240">
+        <ExperimentalAcrylicBorder.Material>
+          <ExperimentalAcrylicMaterial TintColor="Black" MaterialOpacity="0.85" TintOpacity="1" />
+        </ExperimentalAcrylicBorder.Material>
+        <StackPanel Spacing="20" Margin="0 20 0 0">
+          <TextBlock  Margin="20 0" Text="XAML Controls Gallery" HorizontalAlignment="Center" />
+          <AutoCompleteBox HorizontalAlignment="Stretch" Margin="20 0" Watermark="Search" Items="{Binding SearchItems}" />
+        </StackPanel>
+      </ExperimentalAcrylicBorder>
+      <ExperimentalAcrylicBorder IsHitTestVisible="False">
+        <ExperimentalAcrylicBorder.Material>
+          <ExperimentalAcrylicMaterial TintColor="#222222" MaterialOpacity="0.85" TintOpacity="1" />
+        </ExperimentalAcrylicBorder.Material>
+        <TextBlock Text="{Binding #TabControl.SelectedItem.Header}" Margin="40 20" FontSize="32" FontWeight="Light" />
+      </ExperimentalAcrylicBorder>
+    </DockPanel>          
+       
+    <TabControl x:Name="TabControl" Classes="sidebar" Margin="0 30 0 0">
+      <TabItem Header="Overview">
+        <pages:OverviewPage />
+      </TabItem>
+      <TabItem Header="Basic Input">
+        
+      </TabItem>
+      <TabItem Header="Collections">
+
+      </TabItem>
+      <TabItem Header="Date and Time">
+
+      </TabItem>
+      <TabItem Header="Layout">
+
+      </TabItem>
+      <TabItem Header="Media">
+        <pages:MediaPage />
+      </TabItem>
+      <TabItem Header="Menus">
+
+      </TabItem>
+      <TabItem Header="Navigation">
+
+      </TabItem>
+      <TabItem Header="Scrolling">
+
+      </TabItem>
+      <TabItem Header="Status and Info">
+
+      </TabItem>
+      <TabItem Header="Styles">
+
+      </TabItem>
+      <TabItem Header="Text">
+
+      </TabItem>
+    </TabControl>    
+  </Panel>
+  <!-- TODO Move to fluent window template -->
+  <!--<Panel Margin="{Binding #MainWindow.OffScreenMargin}">
     <DockPanel VerticalAlignment="Stretch">
       <ExperimentalAcrylicBorder DockPanel.Dock="Left" Width="240">
         <ExperimentalAcrylicBorder.Material>
           <ExperimentalAcrylicMaterial TintColor="Black" MaterialOpacity="0.85" TintOpacity="1" />
         </ExperimentalAcrylicBorder.Material>
         <StackPanel Spacing="20" TextBlock.Foreground="White" Margin="0 40 0 0">
-          <TextBlock  Margin="20 0" Text="XAML Controls Gallery" />
-          <AutoCompleteBox HorizontalAlignment="Stretch" Margin="20 0" Watermark="Search" Items="{Binding SearchItems}" />
+          
           <ItemsControl>
             <ItemsControl.Styles>
               <Style Selector="ListBoxItem">
@@ -128,171 +186,10 @@
         </Panel.Styles>
 
         <ScrollViewer Margin="0 60 0 0" HorizontalScrollBarVisibility="Auto">
-          <StackPanel Margin="44 0 40 40"
-        Orientation="Horizontal"
-        Spacing="40">
-            <StackPanel>
-              <TextBlock Classes="header"
-                  Text="Buttons" />
-              <Button Content="Enabled button" />
-              <Button
-                  Content="Disabled button"
-                  IsEnabled="False"
-                  Margin="0,15,0,0" />
-              <ToggleButton
-                  Content="Toggle button"
-                  IsChecked="True"
-                  Margin="0,15,0,0" />
-
-              <TextBlock Text="Checkbox" Classes="header" />
-              <CheckBox Content="Unchecked" />
-              <CheckBox
-                  Content="Checked"
-                  IsChecked="True"
-                  Margin="0,8,0,0" />
-              <CheckBox
-                  Content="Third state"
-                  IsChecked="{x:Null}"
-                  IsThreeState="True"
-                  Margin="0,8,0,0" />
-              <CheckBox
-                  Content="Disabled"
-                  IsChecked="True"
-                  IsEnabled="False"
-                  Margin="0,8,0,20" />
-
-              <TextBlock
-                  Text="Radio button"
-                  Classes="header" />
-              <RadioButton Content="Unchecked" />
-              <RadioButton
-                  Content="Checked"
-                  IsChecked="True"
-                  Margin="0,8,0,0" />
-              <RadioButton
-                  Content="Disabled"
-                  GroupName="Disabled"
-                  IsChecked="True"
-                  IsEnabled="False"
-                  Margin="0,8,0,0" />
-            </StackPanel>
-
-            <StackPanel Width="296">
-              <TextBlock
-                  Text="Date picker" Classes="header" />
-
-              <DatePicker />
-
-              <TextBlock
-                  Text="Time picker"
-                  Classes="header" />
-
-              <TimePicker />
-
-              <TextBlock
-                  Text="Calendar"
-                  Classes="header" />
-              <Calendar />
-            </StackPanel>
-
-            <StackPanel Width="241">
-              <TextBlock
-                  Text="Combo box"
-                  Classes="header" />
-              <ComboBox HorizontalAlignment="Stretch">
-                <ComboBoxItem>List item</ComboBoxItem>
-                <ComboBoxItem>List item</ComboBoxItem>
-                <ComboBoxItem>List item</ComboBoxItem>
-                <ComboBoxItem>List item</ComboBoxItem>
-              </ComboBox>
-              <ComboBox
-                  HorizontalAlignment="Stretch"
-                  IsEnabled="False"
-                  Margin="0,17,0,0" />
-
-              <TextBlock
-                  Text="List box"
-                  Classes="header" />
-              <Grid>
-                <ListBox
-                    SelectedIndex="0"
-                    Margin="0,6">
-                  <ListBoxItem Content="Linux" />
-                  <ListBoxItem Content="Mac" />
-                  <ListBoxItem Content="Windows" />
-                </ListBox>
-                <Border
-                    BorderBrush="{DynamicResource SystemControlForegroundChromeHighBrush}"
-                    BorderThickness="1"
-                    CornerRadius="{DynamicResource ControlCornerRadius}"
-                    IsHitTestVisible="False" />
-              </Grid>
-
-              <Grid
-                  Width="148"
-                  HorizontalAlignment="Left"
-                  Margin="0,31,0,0">
-                <ListBox
-                    SelectedIndex="0"
-                    Margin="0,6">
-                  <ListBox.Styles>
-                    <Style Selector="ListBoxItem">
-                      <Setter Property="Padding" Value="12,5,12,8" />
-                    </Style>
-                  </ListBox.Styles>
-                  <ListBoxItem Content="Linux" />
-                  <ListBoxItem Content="Mac" />
-                  <ListBoxItem Content="Windows" />
-                </ListBox>
-                <Border
-                    BorderBrush="{DynamicResource SystemControlForegroundChromeHighBrush}"
-                    BorderThickness="1"
-                    CornerRadius="{DynamicResource ControlCornerRadius}"
-                    IsHitTestVisible="False" />
-              </Grid>
-            </StackPanel>
-
-            <StackPanel Width="265">
-              <TextBlock
-                  Text="Textbox"
-                  Classes="header" />
-              <TextBox
-                Watermark="Placeholder text"   />
-              <TextBox
-                  Watermark="Placeholder text"
-                  IsEnabled="False"
-                  Margin="0,17,0,0" />
-              <TextBox
-                  Watermark="Placeholder text"
-                  PasswordChar="*"
-                  Margin="0,17,0,0" />
-
-              <TextBlock
-                  Text="Numeric up down"
-                  Classes="header" />
-              <NumericUpDown FormatString="C2" Increment="0.25" />
-
-              <TextBlock
-                  Text="Slider"
-                  Classes="header" />
-              <Slider x:Name="Slider"
-                  Value="50"
-                  Maximum="100" />
-
-              <TextBlock
-                  Text="Progress bar"
-                  Classes="header" />
-
-              <ProgressBar Value="{Binding #Slider.Value}" />
-
-              <ProgressBar IsIndeterminate="True" Margin="0 40" />
-
-            </StackPanel>
-
-          </StackPanel>
+          
         </ScrollViewer>
       </Panel>
     </DockPanel>
-  </Panel>
+  </Panel>-->
 
 </FluentWindow>

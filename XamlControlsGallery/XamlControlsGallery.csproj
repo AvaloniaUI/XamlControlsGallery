@@ -3,6 +3,9 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Compile Update="**\*.xaml.cs">
@@ -14,9 +17,15 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.9.999-cibuild0008349-beta" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.9.999-cibuild0008349-beta" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.9.999-cibuild0008349-beta" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.999-cibuild0008349-beta" />
+    <None Remove="Assets\teapot.bin" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\teapot.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.9.999-cibuild0008378-beta" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.9.999-cibuild0008378-beta" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.999-cibuild0008378-beta" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.999-cibuild0008378-beta" />
+  </ItemGroup>  
 </Project>
