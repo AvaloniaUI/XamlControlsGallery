@@ -15,7 +15,7 @@
       <SubType>Designer</SubType>
     </AvaloniaResource>
     <AvaloniaResource Include="Assets\**" />
-  </ItemGroup>
+  </ItemGroup>  
   <ItemGroup>
     <None Remove="Assets\teapot.bin" />
   </ItemGroup>
@@ -27,5 +27,5 @@
     <PackageReference Include="Avalonia.Diagnostics" Version="0.9.999-cibuild0008378-beta" />
     <PackageReference Include="Avalonia.Desktop" Version="0.9.999-cibuild0008378-beta" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.999-cibuild0008378-beta" />
-  </ItemGroup>  
+  </ItemGroup> 
 </Project>

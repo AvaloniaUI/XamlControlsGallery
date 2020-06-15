@@ -8,7 +8,7 @@
         x:Class="XamlControlsGallery.Views.MainWindow"
         Icon="{x:Null}"
         x:Name="MainWindow"
-        FontFamily="/Assets/Roboto/Roboto-*.ttf#Roboto"
+        FontFamily="{StaticResource UiFontFamily}"
         FontSize="14"
         Background="{x:Null}"
         Title="XamlControlsGallery">
@@ -98,7 +98,7 @@
 
       </TabItem>
       <TabItem Header="Date and Time">
-
+        <pages:DateTimePage />
       </TabItem>
       <TabItem Header="Layout">
 
