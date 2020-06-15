@@ -101,7 +101,7 @@
         <pages:DateTimePage />
       </TabItem>
       <TabItem Header="Layout">
-
+        <pages:LayoutPage />
       </TabItem>
       <TabItem Header="Media">
         <pages:MediaPage />
