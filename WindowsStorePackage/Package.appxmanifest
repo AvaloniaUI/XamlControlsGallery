@@ -7,13 +7,13 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="c4a8d098-01df-4dda-a432-7b1f44f81792"
-    Publisher="CN=danwa"
-    Version="1.0.0.0" />
+    Name="43743VitalElement.AvaloniaControlGallery"
+    Publisher="CN=A77810A5-709D-4273-B6D4-9240A5A7B905"
+    Version="0.1.4.0" />
 
   <Properties>
-    <DisplayName>WindowsStorePackage</DisplayName>
-    <PublisherDisplayName>danwa</PublisherDisplayName>
+    <DisplayName>Avalonia Control Gallery</DisplayName>
+    <PublisherDisplayName>Vital Element</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
 
@@ -31,13 +31,18 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="WindowsStorePackage"
-        Description="WindowsStorePackage"
+        DisplayName="Avalonia Control Gallery"
+        Description="Gallery app that demonstrates Avalonias controls, with examples of code and links to documentation."
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
         Square44x44Logo="Images\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png" />
+        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png"  Square71x71Logo="Images\SmallTile.png" Square310x310Logo="Images\LargeTile.png"/>
         <uap:SplashScreen Image="Images\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscapeFlipped"/>
+          <uap:Rotation Preference="portraitFlipped"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
