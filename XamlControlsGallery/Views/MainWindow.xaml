@@ -74,10 +74,7 @@
         <ExperimentalAcrylicBorder.Material>
           <ExperimentalAcrylicMaterial TintColor="Black" MaterialOpacity="0.85" TintOpacity="1" />
         </ExperimentalAcrylicBorder.Material>
-        <StackPanel Spacing="20" Margin="0 20 0 0">
-          <TextBlock  Margin="20 0" Text="XAML Controls Gallery" HorizontalAlignment="Center" />
-          <AutoCompleteBox HorizontalAlignment="Stretch" Margin="20 0" Watermark="Search" Items="{Binding SearchItems}" />
-        </StackPanel>
+        <AutoCompleteBox HorizontalAlignment="Stretch" Margin="20 40 20 0" Watermark="Search" Items="{Binding SearchItems}" />
       </ExperimentalAcrylicBorder>
       <ExperimentalAcrylicBorder IsHitTestVisible="False">
         <ExperimentalAcrylicBorder.Material>
@@ -87,7 +84,7 @@
       </ExperimentalAcrylicBorder>
     </DockPanel>          
        
-    <TabControl x:Name="TabControl" Classes="sidebar" Margin="0 30 0 0">
+    <TabControl x:Name="TabControl" Classes="sidebar" Margin="0 20 0 0">
       <TabItem Header="Overview">
         <pages:OverviewPage />
       </TabItem>
