@@ -154,9 +154,44 @@
       <NumericUpDown FormatString="C2" Increment="0.25" />
 
       <TextBlock
+                Text="Toggle switch"
+                Classes="header" />
+      
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="12" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <ToggleSwitch
+            Grid.Row="0"
+            Grid.Column="0" />
+        <ToggleSwitch
+            Grid.Row="2"
+            Grid.Column="0"
+            IsChecked="True" />
+        <ToggleSwitch
+            Grid.Row="0"
+            Grid.Column="1"
+            OffContent="Disabled Off"
+            IsEnabled="False" />
+        <ToggleSwitch
+            Grid.Row="2"
+            Grid.Column="1"
+            OnContent="Disabled On"
+            IsChecked="True"
+            IsEnabled="False" />
+      </Grid>
+
+
+      <TextBlock
           Text="Slider"
           Classes="header" />
-      <Slider x:Name="Slider"
+      <Slider x:Name="Slider" Margin="0"
           Value="50"
           Maximum="100" />
 
