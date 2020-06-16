@@ -107,7 +107,7 @@
         <pages:MediaPage />
       </TabItem>
       <TabItem Header="Menus">
-
+        <pages:MenusPage />
       </TabItem>
       <TabItem Header="Navigation">
 
@@ -126,70 +126,4 @@
       </TabItem>
     </TabControl>    
   </Panel>
-  <!-- TODO Move to fluent window template -->
-  <!--<Panel Margin="{Binding #MainWindow.OffScreenMargin}">
-    <DockPanel VerticalAlignment="Stretch">
-      <ExperimentalAcrylicBorder DockPanel.Dock="Left" Width="240">
-        <ExperimentalAcrylicBorder.Material>
-          <ExperimentalAcrylicMaterial TintColor="Black" MaterialOpacity="0.85" TintOpacity="1" />
-        </ExperimentalAcrylicBorder.Material>
-        <StackPanel Spacing="20" TextBlock.Foreground="White" Margin="0 40 0 0">
-          
-          <ItemsControl>
-            <ItemsControl.Styles>
-              <Style Selector="ListBoxItem">
-                <Setter Property="Margin" Value="0 0" />
-                <Setter Property="HorizontalAlignment" Value="Stretch" />
-                <Setter Property="TextBlock.FontWeight" Value="Light" />
-                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-              </Style>
-              <Style Selector="ListBoxItem > TextBlock">
-                <Setter Property="Margin" Value="10 5" />
-              </Style>
-            </ItemsControl.Styles>
-            <ListBoxItem>
-              <TextBlock Text="Overview" VerticalAlignment="Center"/>
-            </ListBoxItem>
-            <ListBoxItem>
-              <TextBlock Text="Text Input" />
-            </ListBoxItem>
-            <ListBoxItem>
-              <TextBlock Text="Date and Time"/>
-            </ListBoxItem>
-            <ListBoxItem>
-              <TextBlock Text="Dialogs and Flyouts"/>
-            </ListBoxItem>
-            <ListBoxItem>
-              <TextBlock Text="Layout"/>
-            </ListBoxItem>
-            <ListBoxItem>
-              <TextBlock Text="Media"/>
-            </ListBoxItem>
-            <ListBoxItem>
-              <TextBlock Text="Menus and Toolbars"/>
-            </ListBoxItem>
-          </ItemsControl>
-        </StackPanel>
-      </ExperimentalAcrylicBorder>
-
-      <Panel>
-        <ExperimentalAcrylicBorder IsHitTestVisible="False">
-          <ExperimentalAcrylicBorder.Material>
-            <ExperimentalAcrylicMaterial TintColor="#222222" MaterialOpacity="0.85" TintOpacity="1" />
-          </ExperimentalAcrylicBorder.Material>
-        </ExperimentalAcrylicBorder>
-        <TextBlock Text="Overview" Margin="40 20" FontSize="32" FontWeight="Light" />
-        <Panel.Styles>
-          <Style Selector="TextBlock.header">
-            <Setter Property="Margin" Value="0 30 0 20" />
-          </Style>
-        </Panel.Styles>
-
-        <ScrollViewer Margin="0 60 0 0" HorizontalScrollBarVisibility="Auto">
-          
-        </ScrollViewer>
-      </Panel>
-    </DockPanel>
-  </Panel>-->
-
 </FluentWindow>
