@@ -12,6 +12,7 @@
     <Thickness x:Key="PageMargin">40 20 40 100</Thickness>
     <FontFamily x:Key="UiFontFamily">avares://XamlControlsGallery/Assets/Fonts#Lato</FontFamily>
     <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>
+     <StaticResource x:Key="ContentControlThemeFontFamily" ResourceKey="UiFontFamily" />
   </Styles.Resources>
 
   <Style Selector="TextBlock.code">
