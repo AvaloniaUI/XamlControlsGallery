@@ -9,7 +9,7 @@
     </Border>
   </Design.PreviewWith>
   <Styles.Resources>
-    <Thickness x:Key="PageMargin">40 20 40 100</Thickness>
+    <Thickness x:Key="PageMargin">40 0 40 0</Thickness>
     <FontFamily x:Key="UiFontFamily">avares://XamlControlsGallery/Assets/Fonts#Lato</FontFamily>
     <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>
      <StaticResource x:Key="ContentControlThemeFontFamily" ResourceKey="UiFontFamily" />

@@ -84,7 +84,7 @@
       </ExperimentalAcrylicBorder>
     </DockPanel>          
        
-    <TabControl x:Name="TabControl" Classes="sidebar" Margin="0 20 0 0">
+    <TabControl x:Name="TabControl" Classes="sidebar" Margin="0 40 0 20">
       <TabItem Header="Overview">
         <pages:OverviewPage />
       </TabItem>

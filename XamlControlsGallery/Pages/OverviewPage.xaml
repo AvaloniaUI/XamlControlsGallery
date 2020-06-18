@@ -13,7 +13,7 @@
       </Style>
     </StackPanel.Styles>
     <StackPanel>
-      <TextBlock Classes="header" Margin="0 20"
+      <TextBlock Classes="header" Margin="0 0 0 20"
           Text="Buttons" />
       <Button Content="Enabled button" />
       <Button
@@ -60,7 +60,7 @@
 
     <StackPanel Width="296">
       <TextBlock
-          Text="Date picker" Classes="header" Margin="0 20" />
+          Text="Date picker" Classes="header" Margin="0 0 0 20" />
 
       <DatePicker />
 
@@ -78,7 +78,7 @@
 
     <StackPanel Width="241">
       <TextBlock
-          Text="Combo box" Margin="0 20" 
+          Text="Combo box" Margin="0 0 0 20" 
           Classes="header" />
       <ComboBox HorizontalAlignment="Stretch">
         <ComboBoxItem>List item</ComboBoxItem>
@@ -135,7 +135,7 @@
 
     <StackPanel Width="265">
       <TextBlock
-          Text="Textbox" Margin="0 20"
+          Text="Textbox" Margin="0 0 0 20"
           Classes="header" />
       <TextBox
         Watermark="Placeholder text"   />

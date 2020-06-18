@@ -19,7 +19,7 @@
             BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}">
           <DockPanel>
-            <ScrollViewer Width="240" Margin="0 60 0 0"
+            <ScrollViewer Width="240" Margin="0 30 0 0"
                 Name="PART_ScrollViewer"
                 HorizontalScrollBarVisibility="{TemplateBinding (ScrollViewer.HorizontalScrollBarVisibility)}"
                 VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}"
@@ -60,6 +60,7 @@
     <Setter Property="Opacity" Value="0.5"/>
     <Setter Property="Width" Value="240" />
     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="TextBlock.FontWeight" Value="Light" />
     <Setter Property="Transitions">
       <Transitions>
         <DoubleTransition Property="Opacity" Duration="0:0:0.150"/>
@@ -68,16 +69,20 @@
     <Setter Property="(ScrollViewer.HorizontalScrollBarVisibility)" Value="Auto"/>
     <Setter Property="(ScrollViewer.VerticalScrollBarVisibility)" Value="Auto"/>
   </Style>
-  <Style Selector="TabControl.sidebar > TabItem:pointerover">
-    <Setter Property="Opacity" Value="1"/>
+  <Style Selector="TabControl.sidebar > TabItem:selected /template/ Border#PART_SelectedPipe">
+    <Setter Property="IsVisible" Value="False" />
   </Style>
   <Style Selector="TabControl.sidebar > TabItem:pointerover">
-    <Setter Property="Background" Value="#3fffffff"/>
+    <Setter Property="Opacity" Value="1"/>
   </Style>
   <Style Selector="TabControl.sidebar > TabItem:selected">
     <Setter Property="Opacity" Value="1"/>    
   </Style>
   <Style Selector="TabControl.sidebar > TabItem:selected">
     <Setter Property="Background" Value="#1fffffff"/>
-  </Style>  
+  </Style>
+
+  <Style Selector="TabControl.sidebar > TabItem:pointerover /template/ Border#PART_LayoutRoot">
+    <Setter Property="Background" Value="#3fffffff"/>    
+  </Style>
 </Styles>
