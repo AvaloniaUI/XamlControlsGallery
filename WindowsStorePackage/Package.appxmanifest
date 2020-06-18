@@ -9,7 +9,7 @@
   <Identity
     Name="43743VitalElement.AvaloniaControlGallery"
     Publisher="CN=A77810A5-709D-4273-B6D4-9240A5A7B905"
-    Version="0.1.4.0" />
+    Version="0.1.6.0" />
 
   <Properties>
     <DisplayName>Avalonia Control Gallery</DisplayName>
