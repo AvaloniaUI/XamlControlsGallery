@@ -75,7 +75,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
             public delegate int _GetEffectId(IntPtr thisPtr, out Guid guid);
             public delegate int _GetNamedPropertyMapping(IntPtr thisPtr, IntPtr name, IntPtr index, IntPtr mapping);            
             public delegate int _GetProperty(IntPtr thisPtr, uint index, out IntPtr value);
-            public delegate int _GetPropertyCount(IntPtr thisPtr, ref uint count);
+            public unsafe delegate int _GetPropertyCount(IntPtr thisPtr, uint* count);
             public delegate int _GetSource(IntPtr thisPtr, uint index, out IntPtr source);
             public delegate int _GetSourceCount(IntPtr thisPtr, out uint count);
 
@@ -90,7 +90,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
             public static readonly Vftbl AbiToProjectionVftable;
             public static readonly IntPtr AbiToProjectionVftablePtr;
 
-            static Vftbl()
+            unsafe static Vftbl()
             {
                 AbiToProjectionVftable = new Vftbl
                 {
@@ -156,17 +156,20 @@ namespace ABI.Windows.Graphics.Effects.Interop
                 return 0;
             }
 
-            private static int Do_Abi_Get_Property_Count(IntPtr thisPtr, ref uint count)
+            unsafe private static int Do_Abi_Get_Property_Count(IntPtr thisPtr, uint* count)
             {                
 
                 try
                 {
                     var res = ComWrappersSupport.FindObject<global::Windows.Graphics.Effects.Interop.IGraphicsEffectD2D1Interop>(thisPtr).PropertyCount;
-                    count = res;
+
+                    if (count != null)
+                    {
+                        *count = res;
+                    }
                 }
                 catch (Exception ex)
                 {
-                    count = default;
                     return Marshal.GetHRForException(ex);
                 }
 
@@ -180,10 +183,8 @@ namespace ABI.Windows.Graphics.Effects.Interop
                 try
                 {
                     var source = ComWrappersSupport.FindObject<global::Windows.Graphics.Effects.Interop.IGraphicsEffectD2D1Interop>(thisPtr).GetSource(index);
-
-                    var marshalled = MarshalInterface<global::Windows.Graphics.Effects.IGraphicsEffectSource>.FromManaged(source);
-
-                    value = marshalled;
+                    
+                    value = MarshalInterface<global::Windows.Graphics.Effects.IGraphicsEffectSource>.FromManaged(source);
                 }
                 catch (Exception ex)
                 {
@@ -237,9 +238,12 @@ namespace ABI.Windows.Graphics.Effects.Interop
         {
             get
             {
-                uint count = default;
-                Marshal.ThrowExceptionForHR(_obj.Vftbl.GetPropertyCount(ThisPtr, ref count));
-                return count;
+                unsafe
+                {
+                    uint count = default;
+                    Marshal.ThrowExceptionForHR(_obj.Vftbl.GetPropertyCount(ThisPtr, &count));
+                    return count;
+                }
             }
         }
 
