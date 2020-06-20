@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Reactive;
 using ReactiveUI;
 
@@ -14,7 +15,19 @@ namespace XamlControlsGallery.ViewModels
             {
                 IsMenuItemChecked = !IsMenuItemChecked;
             });
+
+            OnClick = ReactiveCommand.Create(() =>
+            {
+                //    var random = new Random();
+                //    CompositionHost.Instance.AddElement((float)(50 + (random.NextDouble() * 150)),
+                //        (float)(random.NextDouble() * 600),
+                //        (float)(random.NextDouble() * 200));
+
+                CompositionHost.Instance.CreateBlur();
+            });
         }
+
+        public ReactiveCommand<Unit, Unit> OnClick { get; }
 
         public bool IsMenuItemChecked
         {

@@ -16,7 +16,7 @@ namespace Avalonia.Controls
             ExtendClientAreaToDecorationsHint = true;
             ExtendClientAreaTitleBarHeightHint = -1;            
 
-            TransparencyLevelHint = WindowTransparencyLevel.AcrylicBlur;            
+            TransparencyLevelHint = WindowTransparencyLevel.Transparent;            
 
             this.GetObservable(WindowStateProperty)
                 .Subscribe(x =>
