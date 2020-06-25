@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reactive;
+using Avalonia;
+using Avalonia.Controls;
 using ReactiveUI;
 
 namespace XamlControlsGallery.ViewModels
@@ -22,8 +24,8 @@ namespace XamlControlsGallery.ViewModels
                 //    CompositionHost.Instance.AddElement((float)(50 + (random.NextDouble() * 150)),
                 //        (float)(random.NextDouble() * 600),
                 //        (float)(random.NextDouble() * 200));
-
-                CompositionHost.Instance.CreateBlur();
+                
+                CompositionHost.Instance.CreateBlur(1000, 1000);
             });
         }
 

@@ -82,8 +82,8 @@ namespace ABI.Windows.Graphics.Effects.Interop
             internal global::WinRT.Interop.IUnknownVftbl IUnknownVftbl;
             public _GetEffectId GetEffectId;
             public _GetNamedPropertyMapping GetNamedPropertyMapping;
-            public _GetProperty GetProperty;
             public _GetPropertyCount GetPropertyCount;
+            public _GetProperty GetProperty;            
             public _GetSource GetSource;
             public _GetSourceCount GetSourceCount;
 
@@ -97,8 +97,8 @@ namespace ABI.Windows.Graphics.Effects.Interop
                     IUnknownVftbl = global::WinRT.Interop.IUnknownVftbl.AbiToProjectionVftbl,
                     GetEffectId = Do_Abi_Get_Effect_Id,
                     GetNamedPropertyMapping = Do_Abi_Get_Property_Mapping,
-                    GetProperty = Do_Abi_Get_Property,
                     GetPropertyCount = Do_Abi_Get_Property_Count,
+                    GetProperty = Do_Abi_Get_Property,                    
                     GetSource = Do_Abi_Get_Source,
                     GetSourceCount = Do_Abi_Get_Source_Count
 
@@ -143,9 +143,10 @@ namespace ABI.Windows.Graphics.Effects.Interop
 
                 try
                 {
-                    value = MarshalInspectable.FromManaged(
-                        ComWrappersSupport.FindObject<global::Windows.Graphics.Effects.Interop.IGraphicsEffectD2D1Interop>(thisPtr)
-                        .GetProperty(index));
+                    value = MarshalInspectable.CreateMarshaler(
+                        ComWrappersSupport.FindObject<global::Windows.Graphics.Effects.Interop.IGraphicsEffectD2D1Interop>(thisPtr).GetProperty(index))
+                        .As(Guid.Parse("4BD682DD-7554-40E9-9A9B-82654EDE7E62"))
+                        .GetRef();                    
                     
                 }
                 catch (Exception ex)
@@ -607,7 +608,7 @@ namespace XamlControlsGallery
             CreateCompositionRoot();
         }
 
-        public void CreateBlur ()
+        public void CreateBlur (int height, int width)
         {
             var src = new Windows.UI.Composition.CompositionEffectSourceParameter("backdrop");
 
@@ -621,7 +622,8 @@ namespace XamlControlsGallery
             blurBrush.SetSourceParameter("backdrop", backDropBrush);
 
             var visual = _compositor.CreateSpriteVisual();
-            visual.Size = new System.Numerics.Vector2(100, 100);
+
+            visual.Size = _target.Root.Size;
             visual.Brush = blurBrush;
 
             _target.Root = visual;

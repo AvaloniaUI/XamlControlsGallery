@@ -12,7 +12,7 @@
         FontFamily="{StaticResource UiFontFamily}"
         FontSize="14"
         Foreground="{StaticResource SystemBaseHighColor}"
-        Background="Black"
+        Background="{x:Null}"
         Title="XamlControlsGallery">
   <FluentWindow.Styles>
     <Style Selector="TitleBar:fullscreen">

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "XamlControlsGallery": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
