@@ -11,8 +11,8 @@
         WindowStartupLocation="CenterScreen"
         FontFamily="{StaticResource UiFontFamily}"
         FontSize="14"
-        Foreground="{StaticResource SystemBaseHighColor}"
-        Background="{x:Null}"
+        Foreground="{StaticResource SystemBaseHighColor}"    
+        Background="#7f000000"
         Title="XamlControlsGallery">
   <FluentWindow.Styles>
     <Style Selector="TitleBar:fullscreen">
@@ -70,5 +70,6 @@
     </NativeMenu>
   </NativeMenu.Menu>
 
-  <Button Command="{Binding OnClick}" Content="Add" />
+      
+    <Button Command="{Binding OnClick}" Content="Add" />  
 </FluentWindow>

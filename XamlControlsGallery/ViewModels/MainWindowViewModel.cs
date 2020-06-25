@@ -25,7 +25,7 @@ namespace XamlControlsGallery.ViewModels
                 //        (float)(random.NextDouble() * 600),
                 //        (float)(random.NextDouble() * 200));
                 
-                CompositionHost.Instance.CreateBlur(1000, 1000);
+                CompositionHost.Instance.CreateBlur();
             });
         }
 

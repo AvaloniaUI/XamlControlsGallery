@@ -73,7 +73,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
         public struct Vftbl
         {
             public delegate int _GetEffectId(IntPtr thisPtr, out Guid guid);
-            public delegate int _GetNamedPropertyMapping(IntPtr thisPtr, IntPtr name, IntPtr index, IntPtr mapping);            
+            public delegate int _GetNamedPropertyMapping(IntPtr thisPtr, IntPtr name, IntPtr index, IntPtr mapping);
             public delegate int _GetProperty(IntPtr thisPtr, uint index, out IntPtr value);
             public unsafe delegate int _GetPropertyCount(IntPtr thisPtr, uint* count);
             public delegate int _GetSource(IntPtr thisPtr, uint index, out IntPtr source);
@@ -83,7 +83,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
             public _GetEffectId GetEffectId;
             public _GetNamedPropertyMapping GetNamedPropertyMapping;
             public _GetPropertyCount GetPropertyCount;
-            public _GetProperty GetProperty;            
+            public _GetProperty GetProperty;
             public _GetSource GetSource;
             public _GetSourceCount GetSourceCount;
 
@@ -98,7 +98,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
                     GetEffectId = Do_Abi_Get_Effect_Id,
                     GetNamedPropertyMapping = Do_Abi_Get_Property_Mapping,
                     GetPropertyCount = Do_Abi_Get_Property_Count,
-                    GetProperty = Do_Abi_Get_Property,                    
+                    GetProperty = Do_Abi_Get_Property,
                     GetSource = Do_Abi_Get_Source,
                     GetSourceCount = Do_Abi_Get_Source_Count
 
@@ -113,7 +113,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
 
                 try
                 {
-                    guid = ComWrappersSupport.FindObject<global::Windows.Graphics.Effects.Interop.IGraphicsEffectD2D1Interop>(thisPtr).EffectId;                    
+                    guid = ComWrappersSupport.FindObject<global::Windows.Graphics.Effects.Interop.IGraphicsEffectD2D1Interop>(thisPtr).EffectId;
                 }
                 catch (Exception ex)
                 {
@@ -123,13 +123,13 @@ namespace ABI.Windows.Graphics.Effects.Interop
                 return 0;
             }
 
-            private static int Do_Abi_Get_Property_Mapping (IntPtr thisPtr, IntPtr name, IntPtr index, IntPtr mapping)
+            private static int Do_Abi_Get_Property_Mapping(IntPtr thisPtr, IntPtr name, IntPtr index, IntPtr mapping)
             {
                 try
                 {
                     ComWrappersSupport.FindObject<global::Windows.Graphics.Effects.Interop.IGraphicsEffectD2D1Interop>(thisPtr).GetNamedPropertyMapping(MarshalString.FromAbi(name), out var mappingResult);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     return Marshal.GetHRForException(ex);
                 }
@@ -146,8 +146,8 @@ namespace ABI.Windows.Graphics.Effects.Interop
                     value = MarshalInspectable.CreateMarshaler(
                         ComWrappersSupport.FindObject<global::Windows.Graphics.Effects.Interop.IGraphicsEffectD2D1Interop>(thisPtr).GetProperty(index))
                         .As(Guid.Parse("4BD682DD-7554-40E9-9A9B-82654EDE7E62"))
-                        .GetRef();                    
-                    
+                        .GetRef();
+
                 }
                 catch (Exception ex)
                 {
@@ -158,7 +158,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
             }
 
             unsafe private static int Do_Abi_Get_Property_Count(IntPtr thisPtr, uint* count)
-            {                
+            {
 
                 try
                 {
@@ -184,7 +184,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
                 try
                 {
                     var source = ComWrappersSupport.FindObject<global::Windows.Graphics.Effects.Interop.IGraphicsEffectD2D1Interop>(thisPtr).GetSource(index);
-                    
+
                     value = MarshalInterface<global::Windows.Graphics.Effects.IGraphicsEffectSource>.FromManaged(source);
                 }
                 catch (Exception ex)
@@ -216,7 +216,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
         public static implicit operator IGraphicsEffectD2D1Interop(IObjectReference obj) => (obj != null) ? new IGraphicsEffectD2D1Interop(obj) : null;
         protected readonly ObjectReference<Vftbl> _obj;
         public IObjectReference ObjRef { get => _obj; }
-        public IntPtr ThisPtr => _obj.ThisPtr;        
+        public IntPtr ThisPtr => _obj.ThisPtr;
 
         public ObjectReference<I> AsInterface<I>() => _obj.As<I>();
         public A As<A>() => _obj.AsType<A>();
@@ -265,7 +265,7 @@ namespace ABI.Windows.Graphics.Effects.Interop
         public object GetProperty(uint index)
         {
             // Marshal.ThrowExceptionForHR(_obj.Vftbl.GetProperty(ThisPtr, index, out IntPtr value));
-            throw new NotImplementedException();            
+            throw new NotImplementedException();
         }
 
         public global::Windows.Graphics.Effects.IGraphicsEffectSource GetSource(uint index)
@@ -478,7 +478,7 @@ namespace XamlControlsGallery
                     return 30.0f;
 
                 case D2D1_GAUSSIANBLUR_PROP.D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION:
-                    return (UInt32)D2D1_GAUSSIANBLUR_OPTIMIZATION.D2D1_GAUSSIANBLUR_OPTIMIZATION_BALANCED;
+                    return (UInt32)D2D1_GAUSSIANBLUR_OPTIMIZATION.D2D1_GAUSSIANBLUR_OPTIMIZATION_SPEED;
 
                 case D2D1_GAUSSIANBLUR_PROP.D2D1_GAUSSIANBLUR_PROP_BORDER_MODE:
                     return (UInt32)D2D1_BORDER_MODE.D2D1_BORDER_MODE_HARD;
@@ -491,7 +491,7 @@ namespace XamlControlsGallery
 
         public IGraphicsEffectSource GetSource(uint index)
         {
-            if(index == 0)
+            if (index == 0)
             {
                 return _source;
             }
@@ -574,20 +574,20 @@ namespace XamlControlsGallery
         {
             if (_target.Root != null)
             {
-                var visuals = _target.Root.As<ContainerVisual> ().Children;
+                var visuals = _target.Root.As<ContainerVisual>().Children;
 
                 var visual = _compositor.CreateSpriteVisual();
 
                 var element = _compositor.CreateSpriteVisual();
                 var rand = new Random();
 
-                element.Brush = _compositor.CreateColorBrush(new Windows.UI.Color { A = 255, R = (byte)(rand.NextDouble() * 255), G = (byte)(rand.NextDouble() * 255), B = (byte)(rand.NextDouble() * 255)});
+                element.Brush = _compositor.CreateColorBrush(new Windows.UI.Color { A = 255, R = (byte)(rand.NextDouble() * 255), G = (byte)(rand.NextDouble() * 255), B = (byte)(rand.NextDouble() * 255) });
                 element.Size = new System.Numerics.Vector2(size, size);
                 element.Offset = new System.Numerics.Vector3(x, y, 0.0f);
 
                 var animation = _compositor.CreateVector3KeyFrameAnimation();
                 var bottom = (float)600 - element.Size.Y;
-                animation.InsertKeyFrame(1, new System.Numerics.Vector3(element.Offset.X, bottom, 0));                
+                animation.InsertKeyFrame(1, new System.Numerics.Vector3(element.Offset.X, bottom, 0));
 
                 animation.Duration = TimeSpan.FromSeconds(2);
                 animation.DelayTime = TimeSpan.FromSeconds(3);
@@ -608,34 +608,28 @@ namespace XamlControlsGallery
             CreateCompositionRoot();
         }
 
-        public void CreateBlur (int height, int width)
+        public void CreateBlur()
         {
-            var src = new Windows.UI.Composition.CompositionEffectSourceParameter("backdrop");
-
             var effect = new GaussianBlurEffect();
             var effectFactory = _compositor.CreateEffectFactory(effect);
-
             var blurBrush = effectFactory.CreateBrush();
 
             var backDropBrush = _compositor.CreateBackdropBrush();
 
             blurBrush.SetSourceParameter("backdrop", backDropBrush);
 
-            var visual = _compositor.CreateSpriteVisual();
-
-            visual.Size = _target.Root.Size;
+            var visual = _compositor.CreateSpriteVisual();             
+            visual.RelativeSizeAdjustment = new System.Numerics.Vector2(1.0f, 1.0f);            
             visual.Brush = blurBrush;
 
             _target.Root = visual;
-            
-            
         }
 
         void CreateCompositionRoot()
         {
             var root = _compositor.CreateContainerVisual();
             root.RelativeSizeAdjustment = new System.Numerics.Vector2(1.0f, 1.0f);
-            root.Offset = new System.Numerics.Vector3(124, 12, 0);
+            //root.Offset = new System.Numerics.Vector3(0, 0, 0);
             _target.Root = root;
         }
 
