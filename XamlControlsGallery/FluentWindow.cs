@@ -40,8 +40,7 @@ namespace Avalonia.Controls
         {
             base.OnApplyTemplate(e);            
             ExtendClientAreaChromeHints = 
-                ExtendClientAreaChromeHints.SystemChromeButtons | 
-                ExtendClientAreaChromeHints.ManagedChromeButtons |
+                ExtendClientAreaChromeHints.PreferSystemChrome |                 
                 ExtendClientAreaChromeHints.OSXThickTitleBar;
         }
     }

@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:converters="clr-namespace:Avalonia.Markup.Xaml.Converters;assembly=Avalonia.Markup.Xaml"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="clr-namespace:XamlControlsGallery.ViewModels"
+             x:DataType="vm:LayoutPageViewModel"
              x:Class="XamlControlsGallery.Pages.LayoutPage">
   <StackPanel HorizontalAlignment="Stretch" Margin="{StaticResource PageMargin}" Background="Transparent" Spacing="20">    
     <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
@@ -158,14 +160,14 @@
               <converters:ColorToBrushConverter x:Key="BrushConverter" />
             </Border.Resources>
             <ScrollViewer Height="400" Width="400">
-              <ItemsRepeater Items="{Binding Items}">
+              <ItemsRepeater Items="{CompiledBinding Items}">
                 <ItemsRepeater.Layout>
                   <StackLayout Spacing="4" Orientation="Vertical"/>
                 </ItemsRepeater.Layout>
                 <ItemsRepeater.ItemTemplate>
-                  <DataTemplate>
-                    <Border Background="{Binding Color, Converter={StaticResource BrushConverter}}" Width="80" Height="80">
-                      <TextBlock Text="{Binding Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                  <DataTemplate x:DataType="vm:ItemViewModel">
+                    <Border Background="{CompiledBinding Color, Converter={StaticResource BrushConverter}}" Width="80" Height="80">
+                      <TextBlock Text="{CompiledBinding Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                   </DataTemplate>
                 </ItemsRepeater.ItemTemplate>
@@ -177,14 +179,14 @@
               <TextBlock.Text>
                 <x:String>
 &lt;ScrollViewer Height="400" Width="400"&gt;
-  &lt;ItemsRepeater Items="{Binding Items}"&gt;
+  &lt;ItemsRepeater Items="{CompiledBinding Items}"&gt;
     &lt;ItemsRepeater.Layout&gt;
       &lt;StackLayout Spacing="4" Orientation="Vertical"/&gt;
     &lt;/ItemsRepeater.Layout&gt;
     &lt;ItemsRepeater.ItemTemplate&gt;
       &lt;DataTemplate&gt;
-        &lt;Border Background="{Binding Color, Converter={StaticResource BrushConverter}}" Width="80" Height="80"&gt;
-          &lt;TextBlock Text="{Binding Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/&gt;
+        &lt;Border Background="{CompiledBinding Color, Converter={StaticResource BrushConverter}}" Width="80" Height="80"&gt;
+          &lt;TextBlock Text="{CompiledBinding Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/&gt;
         &lt;/Border&gt;
       &lt;/DataTemplate&gt;
     &lt;/ItemsRepeater.ItemTemplate&gt;
@@ -204,14 +206,14 @@
               <converters:ColorToBrushConverter x:Key="BrushConverter" />
             </Border.Resources>
             <ScrollViewer Height="400" Width="400" HorizontalScrollBarVisibility="Disabled">
-              <ItemsRepeater Items="{Binding Items}">
+              <ItemsRepeater Items="{CompiledBinding Items}">
                 <ItemsRepeater.Layout>
                   <UniformGridLayout Orientation="Horizontal" />
                 </ItemsRepeater.Layout>
                 <ItemsRepeater.ItemTemplate>
-                  <DataTemplate>
-                    <Border Background="{Binding Color, Converter={StaticResource BrushConverter}}" Width="80" Height="80">
-                      <TextBlock Text="{Binding Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                  <DataTemplate x:DataType="vm:ItemViewModel">
+                    <Border Background="{CompiledBinding Color, Converter={StaticResource BrushConverter}}" Width="80" Height="80">
+                      <TextBlock Text="{CompiledBinding Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                   </DataTemplate>
                 </ItemsRepeater.ItemTemplate>
@@ -223,14 +225,14 @@
               <TextBlock.Text>
                 <x:String>
                   &lt;ScrollViewer Height="400" Width="400" HorizontalScrollBarVisibility="Disabled"&gt;
-  &lt;ItemsRepeater Items="{Binding Items}"&gt;
+  &lt;ItemsRepeater Items="{CompiledBinding Items}"&gt;
     &lt;ItemsRepeater.Layout&gt;
       &lt;UniformGridLayout Orientation="Horizontal" /&gt;
     &lt;/ItemsRepeater.Layout&gt;
     &lt;ItemsRepeater.ItemTemplate&gt;
       &lt;DataTemplate&gt;
-        &lt;Border Background="{Binding Color, Converter={StaticResource BrushConverter}}" Width="80" Height="80"&gt;
-          &lt;TextBlock Text="{Binding Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/&gt;
+        &lt;Border Background="{CompiledBinding Color, Converter={StaticResource BrushConverter}}" Width="80" Height="80"&gt;
+          &lt;TextBlock Text="{CompiledBinding Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/&gt;
         &lt;/Border&gt;
       &lt;/DataTemplate&gt;
     &lt;/ItemsRepeater.ItemTemplate&gt;
