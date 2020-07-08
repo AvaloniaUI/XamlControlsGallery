@@ -70,6 +70,9 @@
     </NativeMenu>
   </NativeMenu.Menu>
 
-      
-    <Button Command="{Binding OnClick}" Content="Add" />  
+    
+  <StackPanel>
+    <StackPanel Orientation="Horizontal" x:Name="SP" Spacing="10" Margin="10" HorizontalAlignment="Center" />
+  <Button Content="Click Me" Command="{Binding OnClick}" />
+  </StackPanel>    
 </FluentWindow>
