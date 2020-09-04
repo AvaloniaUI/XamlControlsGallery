@@ -17,6 +17,7 @@ namespace XamlControlsGallery
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
+                .With(new SkiaOptions{ MaxGpuResourceSizeBytes = 8096000})
                 .LogToDebug()
                 .UseReactiveUI();
     }

@@ -1,13 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Platforms>AnyCPU;x64;x86</Platforms>
-    <PublishTrimmed>True</PublishTrimmed>
-  </PropertyGroup>
-  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  
   <ItemGroup>
     <Folder Include="Models\" />
     <Compile Update="**\*.xaml.cs">
@@ -21,10 +18,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Assets\teapot.bin" />
   </ItemGroup>
-  <ItemGroup>    
-    <PackageReference Include="Avalonia" Version="0.10.0-preview1" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.0-preview1" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.0-preview1" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0-preview1" />    
-  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0-preview5" />
+   </ItemGroup>
+
 </Project>
