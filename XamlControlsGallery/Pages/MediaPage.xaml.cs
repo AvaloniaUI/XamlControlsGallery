@@ -8,6 +8,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.OpenGL;
+using Avalonia.OpenGL.Controls;
 using Avalonia.Platform.Interop;
 using Avalonia.Threading;
 using static Avalonia.OpenGL.GlConsts;

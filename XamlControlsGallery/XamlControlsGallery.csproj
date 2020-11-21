@@ -20,9 +20,9 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.0-preview5" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.0-preview5" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0-preview5" />
+    <PackageReference Include="Avalonia" Version="0.10.999-cibuild0012021-beta" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.999-cibuild0012021-beta" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.999-cibuild0012021-beta" />
    </ItemGroup>
 
 </Project>
