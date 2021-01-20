@@ -6,7 +6,6 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <Folder Include="Models\" />
     <Compile Update="**\*.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
@@ -20,9 +19,9 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.999-cibuild0012021-beta" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.999-cibuild0012021-beta" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.999-cibuild0012021-beta" />
+    <PackageReference Include="Avalonia" Version="0.10.999-cibuild0012558-beta" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.999-cibuild0012558-beta" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.999-cibuild0012558-beta" />
    </ItemGroup>
 
 </Project>
