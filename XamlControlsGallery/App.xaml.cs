@@ -15,7 +15,6 @@ namespace XamlControlsGallery
         
         public override void Initialize()
         {
-            
             AvaloniaXamlLoader.Load(this);
         }
 

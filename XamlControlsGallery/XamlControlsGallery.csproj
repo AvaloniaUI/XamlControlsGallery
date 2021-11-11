@@ -20,9 +20,7 @@
   
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.10" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.10" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.10" />
-
     <PackageReference Include="Avalonia.AvaloniaEdit" Version="0.10.9" />
 
   </ItemGroup>
