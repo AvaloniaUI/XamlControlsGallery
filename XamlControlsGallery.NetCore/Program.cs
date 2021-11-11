@@ -2,6 +2,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.ReactiveUI;
+using XamlControlsGallery.Helpers;
 
 namespace XamlControlsGallery
 {
@@ -17,8 +18,9 @@ namespace XamlControlsGallery
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .With(new SkiaOptions{ MaxGpuResourceSizeBytes = 8096000})
-                .With(new Win32PlatformOptions{ AllowEglInitialization = true })
+                .With(new SkiaOptions { MaxGpuResourceSizeBytes = 8096000 })
+                .With(new Win32PlatformOptions { AllowEglInitialization = true })
+                .AfterSetup(_ => ThemeHelper.ApplyTheme(ThemeMode.Light))
                 .LogToDebug()
                 .UseReactiveUI();
     }

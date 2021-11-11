@@ -6,8 +6,8 @@
         <local:ViewLocator/>
     </Application.DataTemplates>
 
-    <Application.Styles>        
-      <FluentTheme Mode="Dark" />
+    <Application.Styles>
+      <StyleInclude Source="/Styles/Themes/BaseLight.xaml" />
       <StyleInclude Source="/Styles/Styles.xaml" />
       <StyleInclude Source="/Styles/SideBar.xaml" />
       <StyleInclude Source="avares://AvaloniaEdit/AvaloniaEdit.xaml" />

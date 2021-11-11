@@ -18,7 +18,7 @@
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
             
-            <avaloniaEdit:TextEditor x:Name="s" Classes="Examples">
+            <avaloniaEdit:TextEditor Classes="Examples">
               <avaloniaEdit:TextEditor.Text>
                 <x:String>
                   &lt;DatePicker Header="Pick a date" /&gt;

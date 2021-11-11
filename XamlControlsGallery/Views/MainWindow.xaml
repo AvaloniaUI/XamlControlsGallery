@@ -1,4 +1,4 @@
-﻿<FluentWindow xmlns="https://github.com/avaloniaui"
+﻿<controls:FluentWindow xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="clr-namespace:XamlControlsGallery.ViewModels;assembly=XamlControlsGallery"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,17 +6,13 @@
         mc:Ignorable="d" d:DesignWidth="1350" d:DesignHeight="700" Height="800" Width="1400"
         xmlns:pages="clr-namespace:XamlControlsGallery.Pages;assembly=XamlControlsGallery"
         xmlns:local="clr-namespace:XamlControlsGallery.Views"
+        xmlns:controls="clr-namespace:Avalonia.Controls"
         x:Class="XamlControlsGallery.Views.MainWindow"
         Icon="{x:Null}"
         x:Name="MainWindow"
         WindowStartupLocation="CenterScreen"
         Background="{x:Null}"
         Title="XamlControlsGallery">
-  <FluentWindow.Styles>
-    <Style Selector="TitleBar:fullscreen">
-      <Setter Property="Background" Value="#7f000000" />
-    </Style>
-  </FluentWindow.Styles>
 
   <Design.DataContext>
     <vm:MainWindowViewModel/>
@@ -71,4 +67,4 @@
   <Panel Margin="{Binding #MainWindow.OffScreenMargin}">
        <local:MainView />
   </Panel>
-</FluentWindow>
+</controls:FluentWindow>
