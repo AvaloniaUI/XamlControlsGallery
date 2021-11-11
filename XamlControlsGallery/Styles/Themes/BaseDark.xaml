@@ -1,6 +1,19 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ae="https://github.com/avaloniaui/avaloniaedit">
+  <Styles.Resources>
+    <Thickness x:Key="PageMargin">40 0 40 0</Thickness>
+    <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>
+    <Color x:Key="XamlCodeComment">Pink</Color>
+    <Color x:Key="XamlCodeCData">Red</Color>
+    <Color x:Key="XamlCodeDocType">Orange</Color>
+    <Color x:Key="XamlCodeXmlDeclaration">Gray</Color>
+    <Color x:Key="XamlCodeXmlTag">Cyan</Color>
+    <Color x:Key="XamlCodeAttributeName">Green</Color>
+    <Color x:Key="XamlCodeAttributeValue">Teal</Color>
+    <Color x:Key="XamlCodeEntity">Gold</Color>
+    <Color x:Key="XamlCodeBrokenEntity">Violet</Color> 
+  </Styles.Resources>
   <FluentTheme Mode="Dark" />
 
   <Design.PreviewWith>
@@ -10,10 +23,6 @@
       </StackPanel>
     </Border>
   </Design.PreviewWith>
-  <Styles.Resources>
-    <Thickness x:Key="PageMargin">40 0 40 0</Thickness>
-    <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>
-  </Styles.Resources>
 
   <Style Selector="TextBlock.code">
     <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />

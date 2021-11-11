@@ -7,12 +7,13 @@ namespace XamlControlsGallery.Helpers
 {
     public static class ThemeHelper
     {
-        public static ThemeMode CurrentThemeMode { get; private set; }
+        public static ThemeMode CurrentTheme { get; private set; }
 
         public static void ApplyTheme(ThemeMode themeMode)
         {
-            var currentTheme = Application.Current.Styles.Select(x => (StyleInclude)x).FirstOrDefault(x => 
-                x.Source is { } && (x.Source.ToString().Contains("BaseDark") || x.Source.ToString().Contains("BaseLight")));
+            var currentTheme = Application.Current.Styles.Select(x => (StyleInclude)x).FirstOrDefault(x =>
+                x.Source is { } && (x.Source.ToString().Contains("BaseDark") ||
+                                    x.Source.ToString().Contains("BaseLight")));
 
             if (currentTheme is { })
             {
@@ -23,9 +24,24 @@ namespace XamlControlsGallery.Helpers
                     Source = new Uri($"avares://{nameof(XamlControlsGallery)}/Styles/Themes/Base{themeMode}.xaml")
                 };
 
-                CurrentThemeMode = themeMode;
+                
+                CurrentTheme = themeMode;
                 Application.Current.Styles[themeIndex] = newTheme;
             }
+
+            
+            
+            // foreach (var VARIABLE in )
+            // {
+            //     
+            // }
+
+
+         }
+
+        public static void ToggleTheme()
+        {
+            ApplyTheme(CurrentTheme == ThemeMode.Dark ? ThemeMode.Light : ThemeMode.Dark);
         }
     }
 }

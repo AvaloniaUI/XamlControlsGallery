@@ -1,0 +1,17 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:XamlControlsGallery.ViewModels"
+             x:DataType="vm:ThemePageViewModel"
+             x:CompileBindings="True"
+             x:Class="XamlControlsGallery.Pages.ThemePage">
+  <StackPanel Margin="{StaticResource PageMargin}" Background="Transparent"
+              Orientation="Horizontal"
+              Spacing="40">
+     <Button Command="{Binding OnClickCommand}">Toggle Theme</Button>
+    
+    <!-- -->
+  </StackPanel>
+</UserControl>

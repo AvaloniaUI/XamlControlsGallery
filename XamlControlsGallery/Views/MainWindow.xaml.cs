@@ -11,7 +11,6 @@ namespace XamlControlsGallery.Views
         public MainWindow()
         {
             InitializeComponent();
-            this.AttachDevTools();
         }
 
         private void InitializeComponent()

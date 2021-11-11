@@ -13,6 +13,15 @@
   <Styles.Resources>
     <Thickness x:Key="PageMargin">40 0 40 0</Thickness>
     <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>
+    <Color x:Key="XamlCodeComment">Blue</Color>
+    <Color x:Key="XamlCodeCData">Blue</Color>
+    <Color x:Key="XamlCodeDocType">Blue</Color>
+    <Color x:Key="XamlCodeXmlDeclaration">Blue</Color>
+    <Color x:Key="XamlCodeXmlTag">Blue</Color>
+    <Color x:Key="XamlCodeAttributeName">Blue</Color>
+    <Color x:Key="XamlCodeAttributeValue">Blue</Color>
+    <Color x:Key="XamlCodeEntity">Blue</Color>
+    <Color x:Key="XamlCodeBrokenEntity">Blue</Color> 
   </Styles.Resources>
 
   <Style Selector="TextBlock.code">
