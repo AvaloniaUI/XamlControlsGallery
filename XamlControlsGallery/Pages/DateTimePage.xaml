@@ -18,7 +18,7 @@
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
             
-            <avaloniaEdit:TextEditor Classes="Examples">
+            <avaloniaEdit:TextEditor>
               <avaloniaEdit:TextEditor.Text>
                 <x:String>
                   &lt;DatePicker Header="Pick a date" /&gt;
@@ -36,7 +36,7 @@
                                YearVisible="False" />
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <avaloniaEdit:TextEditor Classes="Examples"> 
+            <avaloniaEdit:TextEditor>
               <avaloniaEdit:TextEditor.Text>
                 <x:String>
                   &lt;DatePicker DayFormat="{}{day.integer} ({dayofweek.abbreviated})" YearVisible="False" /&gt;

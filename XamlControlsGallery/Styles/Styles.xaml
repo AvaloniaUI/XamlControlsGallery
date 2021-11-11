@@ -1,5 +1,15 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ae="https://github.com/avaloniaui/avaloniaedit">
+        xmlns:ae="https://github.com/avaloniaui/avaloniaedit"
+        xmlns:helpers="using:XamlControlsGallery.Helpers">
    
+  <Style Selector="ae|TextEditor">
+    <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />
+    <Setter Property="ShowLineNumbers" Value="False" />
+    <Setter Property="FontSize" Value="15" />
+    <Setter Property="Padding" Value="15" />
+    <Setter Property="IsReadOnly" Value="True"/>
+    <Setter Property="DataContext" Value="{Binding Source={x:Static helpers:ThemeHelper.HighlightNotifierInstance}}"/>
+    <Setter Property="SyntaxHighlighting" Value="{Binding Definition, Mode=OneWay}"/>
+  </Style>
 </Styles>

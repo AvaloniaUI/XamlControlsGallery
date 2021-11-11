@@ -1,5 +1,7 @@
 ﻿using Avalonia.Controls;
+using Avalonia.Controls.Primitives;
 using Avalonia.Markup.Xaml;
+using XamlControlsGallery.Helpers;
 
 namespace XamlControlsGallery.Views
 {
@@ -12,7 +14,7 @@ namespace XamlControlsGallery.Views
 
         private void InitializeComponent()
         {
-            AvaloniaXamlLoader.Load(this);            
+            AvaloniaXamlLoader.Load(this);   
         }
     }
 }

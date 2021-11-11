@@ -10,6 +10,7 @@
              Foreground="{DynamicResource SystemBaseHighColor}">
 
   <Panel>
+    
     <DockPanel HorizontalAlignment="Stretch">
       <ExperimentalAcrylicBorder DockPanel.Dock="Left" Width="240">
         <ExperimentalAcrylicBorder.Material>

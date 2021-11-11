@@ -1,6 +1,8 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ae="https://github.com/avaloniaui/avaloniaedit">
+        xmlns:ae="https://github.com/avaloniaui/avaloniaedit"
+        x:CompileBindings="False"
+        xmlns:helpers="clr-namespace:XamlControlsGallery.Helpers">
   <FluentTheme Mode="Light" />
 
   <Design.PreviewWith>
@@ -27,16 +29,9 @@
   <Style Selector="TextBlock.code">
     <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />
   </Style>
-
-
-  <Style Selector="ae|TextEditor.Examples">
-    <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />
+  
+  <Style Selector="ae|TextEditor">
     <Setter Property="Background" Value="White" />
     <Setter Property="Foreground" Value="Black" />
-    <Setter Property="SyntaxHighlighting" Value="XAML-custom" />
-    <Setter Property="ShowLineNumbers" Value="False" />
-    <Setter Property="FontSize" Value="12" />
-    <Setter Property="Padding" Value="12" />
-    <Setter Property="IsReadOnly" Value="True"/>
   </Style>
 </Styles>
