@@ -1,18 +1,31 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ae="https://github.com/avaloniaui/avaloniaedit">
   <Design.PreviewWith>
     <Border Padding="20">
-      <StackPanel Spacing="5">        
+      <StackPanel Spacing="5">
         <TextBlock Text="Code Font Family" FontFamily="{StaticResource CodeFontFamily}" />
       </StackPanel>
     </Border>
   </Design.PreviewWith>
   <Styles.Resources>
-    <Thickness x:Key="PageMargin">40 0 40 0</Thickness>    
-    <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>     
+    <Thickness x:Key="PageMargin">40 0 40 0</Thickness>
+    <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>
   </Styles.Resources>
 
   <Style Selector="TextBlock.code">
     <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />
+  </Style>
+
+
+  <Style Selector="ae|TextEditor.Examples">
+    <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />
+    <Setter Property="Background" Value="Gray" />
+    <Setter Property="Foreground" Value="White" />
+    <Setter Property="SyntaxHighlighting" Value="XML" />
+    <Setter Property="ShowLineNumbers" Value="False" />
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="Padding" Value="12" />
+    <Setter Property="IsReadOnly" Value="True"/>
   </Style>
 </Styles>

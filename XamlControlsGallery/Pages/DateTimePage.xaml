@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:avaloniaEdit="https://github.com/avaloniaui/avaloniaedit"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="XamlControlsGallery.Pages.DateTimePage">
   <StackPanel HorizontalAlignment="Stretch" Margin="{StaticResource PageMargin}" Background="Transparent" Spacing="20">    
@@ -16,13 +17,14 @@
             <DatePicker Header="Pick a date" />
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            
+            <avaloniaEdit:TextEditor x:Name="s" Classes="Examples">
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
                   &lt;DatePicker Header="Pick a date" /&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -34,13 +36,14 @@
                                YearVisible="False" />
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor Classes="Examples"> 
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
                   &lt;DatePicker DayFormat="{}{day.integer} ({dayofweek.abbreviated})" YearVisible="False" /&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
+            
           </Panel>
         </StackPanel>
 

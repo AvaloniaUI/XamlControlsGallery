@@ -1,14 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
-    <Platforms>AnyCPU;x64;x86</Platforms>
-    <PublishTrimmed>True</PublishTrimmed>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.0" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.10" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.10" />
+    
+    <PackageReference Include="HarfBuzzSharp" Version="2.8.2-preview.155" />
+    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="2.8.2-preview.155" />
+    <PackageReference Include="SkiaSharp" Version="2.88.0-preview.155" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.0-preview.155" />
+
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamlControlsGallery\XamlControlsGallery.csproj" />

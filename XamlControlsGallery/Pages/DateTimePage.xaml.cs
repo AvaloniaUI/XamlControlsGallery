@@ -14,6 +14,11 @@ namespace XamlControlsGallery.Pages
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
+
+            var s= this.FindControl<AvaloniaEdit.TextEditor>("s");
+            
+            
+            
         }
     }
 }
