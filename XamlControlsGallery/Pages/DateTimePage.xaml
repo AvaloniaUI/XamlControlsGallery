@@ -43,7 +43,6 @@
                 </x:String>
               </avaloniaEdit:TextEditor.Text>
             </avaloniaEdit:TextEditor>
-            
           </Panel>
         </StackPanel>
 
@@ -61,13 +60,13 @@
             <TimePicker />
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
                   &lt;TimePicker /&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -78,13 +77,13 @@
             <TimePicker Header="Arrival time" MinuteIncrement="15" />
           </Border>
           <Panel Background="{DynamicResource RegionBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
                   &lt;TimePicker Header="Arrival time" MinuteIncrement="15" /&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -95,13 +94,13 @@
             <TimePicker ClockIdentifier="12HourClock" Header="12 hour clock" />
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
                   &lt;TimePicker ClockIdentifier="12HourClock" Header="12 hour clock" /&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -112,16 +111,15 @@
             <TimePicker ClockIdentifier="24HourClock" Header="24 hour clock" />
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
                   &lt;TimePicker ClockIdentifier="24HourClock" Header="24 hour clock" /&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
-
       </StackPanel>
     </Grid>    
   </StackPanel>

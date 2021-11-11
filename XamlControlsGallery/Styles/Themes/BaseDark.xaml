@@ -1,36 +1,22 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ae="https://github.com/avaloniaui/avaloniaedit"
-        xmlns:helpers="clr-namespace:XamlControlsGallery.Helpers">
+        xmlns:ae="https://github.com/avaloniaui/avaloniaedit">
   <Styles.Resources>
-    <Thickness x:Key="PageMargin">40 0 40 0</Thickness>
-    <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>
-    <Color x:Key="XamlCodeComment">Pink</Color>
-    <Color x:Key="XamlCodeCData">Red</Color>
-    <Color x:Key="XamlCodeDocType">Orange</Color>
-    <Color x:Key="XamlCodeXmlDeclaration">Gray</Color>
-    <Color x:Key="XamlCodeXmlTag">Cyan</Color>
-    <Color x:Key="XamlCodeAttributeName">Green</Color>
-    <Color x:Key="XamlCodeAttributeValue">Teal</Color>
-    <Color x:Key="XamlCodeEntity">Gold</Color>
-    <Color x:Key="XamlCodeBrokenEntity">Violet</Color> 
+    <Color x:Key="XamlCodeComment">LightGray</Color>
+    <Color x:Key="XamlCodeCData">LightGray</Color>
+    <Color x:Key="XamlCodeDocType">White</Color>
+    <Color x:Key="XamlCodeXmlDeclaration">White</Color>
+    <Color x:Key="XamlCodeXmlTag">White</Color>
+    <Color x:Key="XamlCodeAttributeName">HotPink</Color>
+    <Color x:Key="XamlCodeAttributeValue">Cyan</Color>
+    <Color x:Key="XamlCodeEntity">White</Color>
+    <Color x:Key="XamlCodeBrokenEntity">White</Color>
   </Styles.Resources>
-  <FluentTheme Mode="Dark" />
 
-  <Design.PreviewWith>
-    <Border Padding="20">
-      <StackPanel Spacing="5">
-        <TextBlock Text="Code Font Family" FontFamily="{StaticResource CodeFontFamily}" />
-      </StackPanel>
-    </Border>
-  </Design.PreviewWith>
-
-  <Style Selector="TextBlock.code">
-    <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />
-  </Style>
-  
   <Style Selector="ae|TextEditor">
-     <Setter Property="Background" Value="Black" />
+    <Setter Property="Background" Value="Black" />
     <Setter Property="Foreground" Value="White" />
- </Style>
+  </Style>
+
+  <FluentTheme Mode="Dark" />
 </Styles>

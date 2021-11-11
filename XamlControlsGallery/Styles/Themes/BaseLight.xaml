@@ -1,37 +1,22 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ae="https://github.com/avaloniaui/avaloniaedit"
-        x:CompileBindings="False"
-        xmlns:helpers="clr-namespace:XamlControlsGallery.Helpers">
-  <FluentTheme Mode="Light" />
-
-  <Design.PreviewWith>
-    <Border Padding="20">
-      <StackPanel Spacing="5">
-        <TextBlock Text="Code Font Family" FontFamily="{StaticResource CodeFontFamily}" />
-      </StackPanel>
-    </Border>
-  </Design.PreviewWith>
+        xmlns:ae="https://github.com/avaloniaui/avaloniaedit">
   <Styles.Resources>
-    <Thickness x:Key="PageMargin">40 0 40 0</Thickness>
-    <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>
-    <Color x:Key="XamlCodeComment">Blue</Color>
-    <Color x:Key="XamlCodeCData">Blue</Color>
-    <Color x:Key="XamlCodeDocType">Blue</Color>
-    <Color x:Key="XamlCodeXmlDeclaration">Blue</Color>
-    <Color x:Key="XamlCodeXmlTag">Blue</Color>
-    <Color x:Key="XamlCodeAttributeName">Blue</Color>
-    <Color x:Key="XamlCodeAttributeValue">Blue</Color>
-    <Color x:Key="XamlCodeEntity">Blue</Color>
-    <Color x:Key="XamlCodeBrokenEntity">Blue</Color> 
+    <Color x:Key="XamlCodeComment">Gray</Color>
+    <Color x:Key="XamlCodeCData">Gray</Color>
+    <Color x:Key="XamlCodeDocType">Black</Color>
+    <Color x:Key="XamlCodeXmlDeclaration">Black</Color>
+    <Color x:Key="XamlCodeXmlTag">Black</Color>
+    <Color x:Key="XamlCodeAttributeName">DarkViolet</Color>
+    <Color x:Key="XamlCodeAttributeValue">DarkGreen</Color>
+    <Color x:Key="XamlCodeEntity">Black</Color>
+    <Color x:Key="XamlCodeBrokenEntity">Black</Color>
   </Styles.Resources>
 
-  <Style Selector="TextBlock.code">
-    <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />
-  </Style>
-  
   <Style Selector="ae|TextEditor">
     <Setter Property="Background" Value="White" />
     <Setter Property="Foreground" Value="Black" />
   </Style>
+
+  <FluentTheme Mode="Light" />
 </Styles>

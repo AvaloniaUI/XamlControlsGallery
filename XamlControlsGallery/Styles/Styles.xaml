@@ -2,7 +2,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ae="https://github.com/avaloniaui/avaloniaedit"
         xmlns:helpers="using:XamlControlsGallery.Helpers">
-   
+  <Styles.Resources>
+    <Thickness x:Key="PageMargin">40 0 40 0</Thickness>
+    <FontFamily x:Key="CodeFontFamily">avares://XamlControlsGallery/Assets/Fonts#Source Code Pro</FontFamily>
+  </Styles.Resources>
   <Style Selector="ae|TextEditor">
     <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />
     <Setter Property="ShowLineNumbers" Value="False" />

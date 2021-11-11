@@ -5,6 +5,7 @@
              xmlns:converters="clr-namespace:Avalonia.Markup.Xaml.Converters;assembly=Avalonia.Markup.Xaml"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              xmlns:vm="clr-namespace:XamlControlsGallery.ViewModels"
+             xmlns:avaloniaEdit="using:AvaloniaEdit"
              x:DataType="vm:LayoutPageViewModel"
              x:Class="XamlControlsGallery.Pages.LayoutPage">
   <StackPanel HorizontalAlignment="Stretch" Margin="{StaticResource PageMargin}" Background="Transparent" Spacing="20">    
@@ -21,15 +22,15 @@
             </Border>
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
 &lt;Border Background="Green" BorderBrush="Yellow" BorderThickness="2"&gt;
   &lt;TextBlock Text="Text inside a border" /&gt;
 &lt;/Border&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -58,8 +59,8 @@
             </Canvas>
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
 &lt;Canvas Width="120" Height="120" Background="Gray"&gt;
   &lt;Rectangle Fill="Red" Canvas.Left="0" Canvas.Top="0" /&gt;
@@ -68,8 +69,8 @@
   &lt;Rectangle Fill="Yellow" Canvas.Left="60" Canvas.Top="60" /&gt;
 &lt;/Canvas&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -93,8 +94,8 @@
             </DockPanel>
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
 &lt;DockPanel Width="240" Height="240"&gt;
   &lt;Rectangle DockPanel.Dock="Top" Height="100" Fill="Green" /&gt;
@@ -104,8 +105,8 @@
   &lt;Rectangle Fill="Magenta"/&gt;
 &lt;/DockPanel&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -129,8 +130,8 @@
             </Grid>
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
 &lt;Grid Width="240" Height="240" Background="Gray" ColumnDefinitions="40, Auto, *" RowDefinitions="40, Auto, *"&gt;
   &lt;Rectangle Fill="Red" Grid.Row="0" Grid.Column="0"/&gt;
@@ -140,8 +141,8 @@
   &lt;Rectangle Fill="Yellow" Grid.Column="2" Grid.RowSpan="2"/&gt;
 &lt;/Grid&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -175,8 +176,8 @@
             </ScrollViewer>
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
 &lt;ScrollViewer Height="400" Width="400"&gt;
   &lt;ItemsRepeater Items="{CompiledBinding Items}"&gt;
@@ -193,8 +194,8 @@
   &lt;/ItemsRepeater&gt;
 &lt;/ScrollViewer&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -221,10 +222,10 @@
             </ScrollViewer>
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
-                  &lt;ScrollViewer Height="400" Width="400" HorizontalScrollBarVisibility="Disabled"&gt;
+&lt;ScrollViewer Height="400" Width="400" HorizontalScrollBarVisibility="Disabled"&gt;
   &lt;ItemsRepeater Items="{CompiledBinding Items}"&gt;
     &lt;ItemsRepeater.Layout&gt;
       &lt;UniformGridLayout Orientation="Horizontal" /&gt;
@@ -239,8 +240,8 @@
   &lt;/ItemsRepeater&gt;
 &lt;/ScrollViewer&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -269,8 +270,8 @@
             </StackPanel>
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
 &lt;StackPanel Orientation="Horizontal" Spacing="8"&gt;
   &lt;Rectangle Fill="Red" /&gt;
@@ -279,8 +280,8 @@
   &lt;Rectangle Fill="Yellow" /&gt;
 &lt;/StackPanel&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
@@ -302,8 +303,23 @@
             </StackPanel>
           </Border>
           <Panel Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-            <TextBlock Padding="15" Classes="code">
-              <TextBlock.Text>
+            
+            
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
+                <x:String>
+                  &lt;StackPanel Orientation="Horizontal" Spacing="8"&gt;
+                  &lt;Rectangle Fill="Red" /&gt;
+                  &lt;Rectangle Fill="Blue" /&gt;
+                  &lt;Rectangle Fill="Green" /&gt;
+                  &lt;Rectangle Fill="Yellow" /&gt;
+                  &lt;/StackPanel&gt;
+                </x:String>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
+
+            <avaloniaEdit:TextEditor>
+              <avaloniaEdit:TextEditor.Text>
                 <x:String>
 &lt;StackPanel Orientation="Vertical" Spacing="8"&gt;
   &lt;Rectangle Fill="Red" /&gt;
@@ -312,8 +328,8 @@
   &lt;Rectangle Fill="Yellow" /&gt;
 &lt;/StackPanel&gt;
                 </x:String>
-              </TextBlock.Text>
-            </TextBlock>
+              </avaloniaEdit:TextEditor.Text>
+            </avaloniaEdit:TextEditor>
           </Panel>
         </StackPanel>
 
