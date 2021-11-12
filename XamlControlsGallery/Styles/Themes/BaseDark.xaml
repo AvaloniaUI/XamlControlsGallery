@@ -7,6 +7,7 @@
     <Color x:Key="XamlCodeDocType">White</Color>
     <Color x:Key="XamlCodeXmlDeclaration">White</Color>
     <Color x:Key="XamlCodeXmlTag">White</Color>
+    <!-- <Color x:Key="XamlCodeTagName">Gold</Color> -->
     <Color x:Key="XamlCodeAttributeName">HotPink</Color>
     <Color x:Key="XamlCodeAttributeValue">Cyan</Color>
     <Color x:Key="XamlCodeEntity">White</Color>

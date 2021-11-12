@@ -1,11 +1,13 @@
 using System;
 using System.ComponentModel;
 using System.Linq;
+using System.Xml;
 using Avalonia;
 using Avalonia.Markup.Xaml.Styling;
 using Avalonia.Media;
 using Avalonia.Styling;
 using AvaloniaEdit.Highlighting;
+using AvaloniaEdit.Highlighting.Xshd;
 using JetBrains.Annotations;
 
 namespace XamlControlsGallery.Helpers
@@ -46,8 +48,12 @@ namespace XamlControlsGallery.Helpers
         {
             if (CurrentThemeStyles.Loaded is not Styles curThemeStyles) return;
 
-            var newHighlighting = HighlightingManager.Instance.GetDefinition("XML");
+            var name = typeof(ThemeHelper).Assembly.GetManifestResourceNames().First(x => x.Contains("xml.xshd"));
+            using var sr = (typeof(ThemeHelper).Assembly.GetManifestResourceStream(name));
+            using var reader = new XmlTextReader(sr);
 
+            var newHighlighting = HighlightingLoader.Load(reader, HighlightingManager.Instance);
+            
             foreach (var syntaxColor in curThemeStyles
                          .Resources
                          .Where(x => x.Key.ToString().StartsWith("XamlCode"))

@@ -5,8 +5,9 @@
     <Color x:Key="XamlCodeComment">Gray</Color>
     <Color x:Key="XamlCodeCData">Gray</Color>
     <Color x:Key="XamlCodeDocType">Black</Color>
-    <Color x:Key="XamlCodeXmlDeclaration">Black</Color>
+    <Color x:Key="XamlCodeXmlDeclaration">Blue</Color>
     <Color x:Key="XamlCodeXmlTag">Black</Color>
+    <!-- <Color x:Key="XamlCodeTagName">Gold</Color> -->
     <Color x:Key="XamlCodeAttributeName">DarkViolet</Color>
     <Color x:Key="XamlCodeAttributeValue">DarkGreen</Color>
     <Color x:Key="XamlCodeEntity">Black</Color>
