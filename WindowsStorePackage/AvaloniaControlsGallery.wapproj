@@ -55,12 +55,12 @@
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
-    <EntryPointProjectUniqueName>..\XamlControlsGallery\XamlControlsGallery.csproj</EntryPointProjectUniqueName>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
-    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <EntryPointProjectUniqueName>..\XamlControlsGallery.NetCore\XamlControlsGallery.NetCore.csproj</EntryPointProjectUniqueName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DefaultLanguage>en-GB</DefaultLanguage>
@@ -108,6 +108,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AvaloniaControlsGallery_TemporaryKey.pfx" />
     <Content Include="Images\LargeTile.scale-100.png" />
     <Content Include="Images\LargeTile.scale-125.png" />
     <Content Include="Images\LargeTile.scale-150.png" />
@@ -162,9 +163,7 @@
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamlControlsGallery\XamlControlsGallery.csproj">
-      <SkipGetTargetFrameworkProperties>True</SkipGetTargetFrameworkProperties>
-    </ProjectReference>
+    <ProjectReference Include="..\XamlControlsGallery.NetCore\XamlControlsGallery.NetCore.csproj" />
   </ItemGroup>
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
 </Project>
