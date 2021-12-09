@@ -47,9 +47,9 @@
       <TabItem Header="Layout">
         <pages:LayoutPage />
       </TabItem>
-      <TabItem Header="Media">
-        <pages:MediaPage />
-      </TabItem>
+      <!-- <TabItem Header="Media"> -->
+      <!--   <pages:MediaPage /> -->
+      <!-- </TabItem> -->
       <TabItem Header="Menus">
         <pages:MenusPage />
       </TabItem>
