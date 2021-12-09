@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlControlsGallery", "Xaml
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlControlsGallery.NetCore", "XamlControlsGallery.NetCore\XamlControlsGallery.NetCore.csproj", "{3A578A47-76AD-4071-8E4F-E1E2D755756B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlControlsGallery.Web", "XamlControlsGallery.Web\XamlControlsGallery.Web.csproj", "{D2421830-279F-4952-BB0B-0BECDD0C69AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,34 @@ Global
 		{3A578A47-76AD-4071-8E4F-E1E2D755756B}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{3A578A47-76AD-4071-8E4F-E1E2D755756B}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{3A578A47-76AD-4071-8E4F-E1E2D755756B}.Release|iPhone.Build.0 = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|ARM.Build.0 = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|x64.Build.0 = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|x86.Build.0 = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|ARM.Build.0 = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|ARM64.Build.0 = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|x64.ActiveCfg = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|x64.Build.0 = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|x86.ActiveCfg = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|x86.Build.0 = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{D2421830-279F-4952-BB0B-0BECDD0C69AF}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

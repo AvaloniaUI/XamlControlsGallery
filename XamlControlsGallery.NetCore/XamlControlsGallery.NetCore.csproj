@@ -5,13 +5,13 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.10" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.10" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.11-rc.2" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.11-rc.2" />
     
-    <PackageReference Include="HarfBuzzSharp" Version="2.8.2-preview.155" />
-    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="2.8.2-preview.155" />
-    <PackageReference Include="SkiaSharp" Version="2.88.0-preview.155" />
-    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.0-preview.155" />
+<!--    <PackageReference Include="HarfBuzzSharp" Version="2.8.2-preview.155" />-->
+<!--    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="2.8.2-preview.155" />-->
+<!--    <PackageReference Include="SkiaSharp" Version="2.88.0-preview.155" />-->
+<!--    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.0-preview.155" />-->
 
   </ItemGroup>
   <ItemGroup>

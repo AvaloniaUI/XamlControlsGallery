@@ -6,6 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamlControlsGallery\XamlControlsGallery.csproj" />
-    <PackageReference Include="Avalonia.iOS" Version="0.10.10" />
+    <PackageReference Include="Avalonia.iOS" Version="0.10.11-rc.2" />
   </ItemGroup>
 </Project>
