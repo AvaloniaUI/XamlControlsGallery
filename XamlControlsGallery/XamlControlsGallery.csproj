@@ -9,10 +9,37 @@
     <Compile Update="**\*.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
-    <AvaloniaResource Include="**\*.xaml">
+    <AvaloniaResource Include="**\*.axaml">
       <SubType>Designer</SubType>
     </AvaloniaResource>
     <AvaloniaResource Include="Assets\**" />
+    <Compile Update="Views\MainView.axaml.cs">
+      <DependentUpon>MainView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainWindow.axaml.cs">
+      <DependentUpon>MainWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="App.axaml.cs">
+      <DependentUpon>App.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\DateTimePage.axaml.cs">
+      <DependentUpon>DateTimePage.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\LayoutPage.axaml.cs">
+      <DependentUpon>LayoutPage.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MediaPage.axaml.cs">
+      <DependentUpon>MediaPage.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\MenusPage.axaml.cs">
+      <DependentUpon>MenusPage.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\OverviewPage.axaml.cs">
+      <DependentUpon>OverviewPage.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\ThemePage.axaml.cs">
+      <DependentUpon>ThemePage.axaml</DependentUpon>
+    </Compile>
   </ItemGroup>  
   <ItemGroup>
     <EmbeddedResource Include="Assets\teapot.bin" />

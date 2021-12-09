@@ -32,9 +32,9 @@ namespace XamlControlsGallery.Helpers
             {
                 var themeIndex = Application.Current.Styles.IndexOf(CurrentThemeStyles);
 
-                var newTheme = new StyleInclude(new Uri($"avares://{nameof(XamlControlsGallery)}/App.xaml"))
+                var newTheme = new StyleInclude(new Uri($"avares://{nameof(XamlControlsGallery)}/App.axaml"))
                 {
-                    Source = new Uri($"avares://{nameof(XamlControlsGallery)}/Styles/Themes/Base{themeMode}.xaml")
+                    Source = new Uri($"avares://{nameof(XamlControlsGallery)}/Styles/Themes/Base{themeMode}.axaml")
                 };
 
                 CurrentTheme = themeMode;

@@ -3,13 +3,13 @@
              xmlns:local="clr-namespace:XamlControlsGallery"
              x:Class="XamlControlsGallery.App" Name="My App">
     <Application.DataTemplates>
-        <local:ViewLocator/>
+        <local:ViewLocator />
     </Application.DataTemplates>
 
     <Application.Styles>
-      <StyleInclude Source="/Styles/Themes/BaseLight.xaml" />
-      <StyleInclude Source="/Styles/Styles.xaml" />
-      <StyleInclude Source="/Styles/SideBar.xaml" />
-      <StyleInclude Source="avares://AvaloniaEdit/AvaloniaEdit.xaml" />
+        <StyleInclude Source="avares://AvaloniaEdit/AvaloniaEdit.axaml" />
+        <StyleInclude Source="/Styles/Styles.axaml" />
+        <StyleInclude Source="/Styles/SideBar.axaml" />
+        <StyleInclude Source="/Styles/Themes/BaseLight.axaml" />
     </Application.Styles>
 </Application>
