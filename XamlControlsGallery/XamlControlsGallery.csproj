@@ -1,56 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AvaloniaVersion>0.10.11-rc.2</AvaloniaVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-  
   <ItemGroup>
-    <Compile Update="**\*.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-    <AvaloniaResource Include="**\*.axaml">
-      <SubType>Designer</SubType>
-    </AvaloniaResource>
-    <AvaloniaResource Include="Assets\**" />
-    <Compile Update="Views\MainView.axaml.cs">
-      <DependentUpon>MainView.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\MainWindow.axaml.cs">
-      <DependentUpon>MainWindow.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="App.axaml.cs">
-      <DependentUpon>App.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\DateTimePage.axaml.cs">
-      <DependentUpon>DateTimePage.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\LayoutPage.axaml.cs">
-      <DependentUpon>LayoutPage.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\MediaPage.axaml.cs">
-      <DependentUpon>MediaPage.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\MenusPage.axaml.cs">
-      <DependentUpon>MenusPage.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\OverviewPage.axaml.cs">
-      <DependentUpon>OverviewPage.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\ThemePage.axaml.cs">
-      <DependentUpon>ThemePage.axaml</DependentUpon>
-    </Compile>
-  </ItemGroup>  
-  <ItemGroup>
-    <EmbeddedResource Include="Assets\teapot.bin" />
-    <EmbeddedResource Include="Assets\xml.xshd" />
+    <AvaloniaResource Include="Assets\**"/>
   </ItemGroup>
-  
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.11-rc.2" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.11-rc.2" />
-    <PackageReference Include="Avalonia.AvaloniaEdit" Version="0.10.9" />
-
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)"/>
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)"/>
+    <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)"/>
+    <PackageReference Include="Avalonia.AvaloniaEdit" Version="0.10.9"/>
   </ItemGroup>
-
 </Project>
