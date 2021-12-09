@@ -2,19 +2,23 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AvaloniaVersion>0.10.11-rc.2</AvaloniaVersion>
   </PropertyGroup>
-  
   <ItemGroup>
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.11-rc.2" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.11-rc.2" />
-    
-<!--    <PackageReference Include="HarfBuzzSharp" Version="2.8.2-preview.155" />-->
-<!--    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="2.8.2-preview.155" />-->
-<!--    <PackageReference Include="SkiaSharp" Version="2.88.0-preview.155" />-->
-<!--    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.0-preview.155" />-->
-
+    <AvaloniaResource Include="Assets\**"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamlControlsGallery\XamlControlsGallery.csproj" />
+    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)"/>
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)"/>
+    <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)"/>
+    <PackageReference Include="HarfBuzzSharp" Version="2.8.2-preview.171"/>
+    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="2.8.2-preview.171"/>
+    <PackageReference Include="SkiaSharp" Version="2.88.0-preview.171"/>
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.0-preview.171"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XamlControlsGallery\XamlControlsGallery.csproj"/>
   </ItemGroup>
 </Project>

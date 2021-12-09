@@ -14,7 +14,7 @@
     
     <ExperimentalAcrylicBorder IsHitTestVisible="False">
       <ExperimentalAcrylicBorder.Material>
-        <ExperimentalAcrylicMaterial TintColor="{DynamicResource ThemeBackgroundColor}" MaterialOpacity="0.70"
+        <ExperimentalAcrylicMaterial TintColor="{DynamicResource SystemChromeLowColor}" MaterialOpacity="0.70"
                                      TintOpacity="0.75" />
       </ExperimentalAcrylicBorder.Material>
       <!-- <TextBlock Text="{Binding #TabControl.SelectedItem.Header}" Margin="40 20" FontSize="32" FontWeight="Light" /> -->

@@ -44,7 +44,7 @@ namespace XamlControlsGallery.Helpers
             }
         }
 
-        private static void ApplySyntaxHighlighting()
+        public static void ApplySyntaxHighlighting()
         {
             if (CurrentThemeStyles.Loaded is not Styles curThemeStyles) return;
 

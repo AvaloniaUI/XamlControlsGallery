@@ -8,6 +8,8 @@
   </PropertyGroup>
   <ItemGroup>
     <AvaloniaResource Include="Assets\**"/>
+    <EmbeddedResource Include="Assets\teapot.bin" />
+    <EmbeddedResource Include="Assets\xml.xshd" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)"/>
